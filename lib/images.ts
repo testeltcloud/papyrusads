@@ -86,6 +86,60 @@ export const images = {
     height: 793,
     alt: "Celular com o app Papyrus Ads aberto",
   },
+  metricCard1: {
+    src: `${dir}/metric-card-1.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 1",
+  },
+  metricCard2: {
+    src: `${dir}/metric-card-2.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 2",
+  },
+  metricCard3: {
+    src: `${dir}/metric-card-3.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 3",
+  },
+  metricCard4: {
+    src: `${dir}/metric-card-4.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 4",
+  },
+  metricCard5: {
+    src: `${dir}/metric-card-5.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 5",
+  },
+  metricCard6: {
+    src: `${dir}/metric-card-6.png`,
+    width: 508,
+    height: 258,
+    alt: "Metric Card 6",
+  },
+  metricCard7: {
+    src: `${dir}/metric-card-7.png`,
+    width: 508,
+    height: 238,
+    alt: "Metric Card 7",
+  },
+  metricCard8: {
+    src: `${dir}/metric-card-8.png`,
+    width: 508,
+    height: 191,
+    alt: "Metric Card 8",
+  },
+  metricCard9: {
+    src: `${dir}/metric-card-9.png`,
+    width: 508,
+    height: 258,
+    alt: "Metric Card 9",
+  },
 } satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof images;
