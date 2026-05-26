@@ -38,79 +38,85 @@ export function Features() {
           </article>
 
           {/* Dashboard */}
-          <article className={`${card} lg:col-span-7`}>
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-8">
-              <div className="lg:max-w-[15rem]">
-                <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
-                  Dashboard simples e visual
-                </h3>
-                <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
-                  Entenda em poucos segundos como suas campanhas estão
-                  performando. Ideal para consultar à noite, no sofá, ou no
-                  intervalo entre reuniões.
-                </p>
-              </div>
-              <div className="flex-1">
-                <AppImage
-                  asset={images.featureDashboard}
-                  sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, 88vw"
-                  className="ml-auto h-auto w-full max-w-[380px]"
-                />
-              </div>
+          <article className="rounded-card bg-surface flex flex-col overflow-hidden lg:col-span-7 relative p-6 md:p-8 min-h-[380px]">
+            <div className="lg:max-w-[17rem] relative z-10">
+              <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
+                Dashboard simples e visual
+              </h3>
+              <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
+                Entenda em poucos segundos como suas campanhas estão
+                performando. Ideal para consultar à noite, no sofá, ou no
+                intervalo entre reuniões.
+              </p>
+            </div>
+            <div className="absolute -bottom-4 -right-4 w-[85%] sm:w-[70%] md:w-[60%] lg:w-[55%]">
+              <AppImage
+                asset={images.featureDashboard}
+                sizes="(min-width: 1024px) 450px, (min-width: 768px) 45vw, 88vw"
+                className="ml-auto h-auto w-full object-cover object-left-top"
+              />
             </div>
           </article>
 
           {/* Indicadores */}
-          <article className={`${card} lg:col-span-4`}>
-            <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
-              Indicadores claros e direto ao ponto
-            </h3>
-            <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
-              Veja o que realmente importa: investimento, vendas, ROAS, CPA e
-              muito mais — sem precisar de tradução da agência.
-            </p>
-            <div className="mt-6 flex flex-1 items-end">
+          <article className="rounded-card bg-surface flex flex-col overflow-hidden lg:col-span-4 min-h-[440px]">
+            <div className="p-6 md:p-8 pb-0">
+              <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
+                Indicadores claros e direto ao ponto
+              </h3>
+              <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
+                Veja o que realmente importa: investimento, vendas, ROAS, CPA e
+                muito mais — sem precisar de tradução da agência.
+              </p>
+            </div>
+            <div className="mt-auto flex items-end pt-4 w-full">
               <AppImage
                 asset={images.featureIndicators}
-                sizes="(min-width: 1024px) 320px, (min-width: 768px) 45vw, 88vw"
-                className="h-auto w-full max-w-[320px]"
+                sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, 88vw"
+                className="h-auto w-[110%] max-w-[110%] -ml-[5%] object-cover object-top"
               />
             </div>
           </article>
 
           {/* Glossário */}
-          <article className={`${card} overflow-hidden lg:col-span-4`}>
-            <h3 className="text-[1.6rem] font-medium leading-snug text-ink">Glossário integrado</h3>
-            <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
-              Não sabe o que é CAC ou ROAS? O app te explica. Com definições
-              simples e exemplos, você aprende enquanto usa.
-            </p>
-            <div className="mt-6 flex flex-1 items-end justify-center">
+          <article className="rounded-card bg-surface flex flex-col overflow-hidden lg:col-span-4 min-h-[440px]">
+            <div className="p-6 md:p-8 pb-0 relative z-10">
+              <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
+                Glossário integrado
+              </h3>
+              <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
+                Não sabe o que é CAC ou ROAS? O app te explica. Com definições
+                simples e exemplos, você aprende enquanto usa.
+              </p>
+            </div>
+            <div className="mt-6 flex-1 flex items-end justify-center px-4">
               <AppImage
                 asset={images.featureGlossary}
-                sizes="(min-width: 1024px) 320px, (min-width: 768px) 45vw, 88vw"
-                className="h-auto w-full max-w-[300px]"
+                sizes="(min-width: 1024px) 360px, (min-width: 768px) 45vw, 88vw"
+                className="h-auto w-[120%] max-w-[120%] sm:w-[130%] sm:max-w-[130%] translate-y-[15%]"
               />
             </div>
           </article>
 
           {/* 15 dias grátis */}
-          <article className={`${card} lg:col-span-4`}>
-            <div className="flex items-start justify-between gap-4">
+          <article className="rounded-card bg-[#F8FAFC] flex flex-col overflow-hidden lg:col-span-4 p-6 md:p-8 min-h-[440px]">
+            <div className="w-full flex justify-center mb-10 -mt-2">
+              <AppImage
+                asset={images.featureGift}
+                sizes="300px"
+                className="h-auto w-[240px] sm:w-[280px] object-contain"
+              />
+            </div>
+            <div className="mt-auto flex flex-col items-start text-left w-full">
               <h3 className="text-[1.6rem] font-medium leading-snug text-ink">
                 15 dias grátis para testar
               </h3>
-              <AppImage
-                asset={images.featureGift}
-                sizes="120px"
-                className="h-auto w-24 shrink-0"
-              />
+              <p className="mt-2 text-[1.0625rem] leading-relaxed text-body">
+                Experimente agora, sem cartão de crédito. Veja na prática como é
+                simples ter autonomia.
+              </p>
+              <DownloadButtons className="mt-6 w-full" size="md" />
             </div>
-            <p className="mt-3 text-[1.0625rem] leading-relaxed text-body">
-              Experimente agora, sem cartão de crédito. Veja na prática como é
-              simples ter autonomia.
-            </p>
-            <DownloadButtons className="mt-auto pt-6" />
           </article>
         </div>
       </div>

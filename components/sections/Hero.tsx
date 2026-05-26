@@ -5,13 +5,7 @@ import { images } from "@/lib/images";
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
-      {/* soft brand glow behind the phone mockup */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-0 hidden h-[520px] w-[520px] rounded-full bg-mint/20 blur-3xl lg:block"
-      />
-
-      <div className="container-page relative grid items-center gap-10 py-12 md:py-16 lg:grid-cols-2 lg:gap-10 lg:py-[88px]">
+      <div className="relative mx-auto grid w-full max-w-[1400px] items-center gap-10 px-[5%] py-12 md:py-16 lg:grid-cols-2 lg:gap-[5%] lg:py-[88px]">
         <div className="max-w-xl">
           <h1 className="text-[2.4rem] font-medium leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.6rem]">
             Você no{" "}
@@ -33,13 +27,20 @@ export function Hero() {
           <DownloadButtons className="mt-8" size="lg" />
         </div>
 
-        <div className="relative lg:justify-self-end">
-          <AppImage
-            asset={images.heroApp}
-            priority
-            sizes="(min-width: 1024px) 560px, (min-width: 640px) 420px, 80vw"
-            className="mx-auto h-auto w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[560px]"
-          />
+        <div className="relative flex items-end justify-center lg:justify-end">
+          <div className="relative w-full max-w-[520px] lg:max-w-[600px]">
+            <AppImage
+              asset={images.ctaPhone}
+              priority
+              sizes="(min-width: 1024px) 380px, (min-width: 640px) 300px, 60vw"
+              className="relative z-10 mx-auto h-auto w-[220px] sm:w-[280px] md:w-[320px] lg:w-[360px]"
+            />
+            {/* Blue gradient overlay — sits on top of the bottom portion */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[50%] rounded-b-[32px] bg-gradient-to-b from-transparent via-[#4a9dcb]/70 to-[#2a7bb5]"
+            />
+          </div>
         </div>
       </div>
     </section>

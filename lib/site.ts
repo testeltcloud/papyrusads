@@ -8,10 +8,9 @@ export const links = {
   whatsapp: "https://wa.me/5500000000000",
 } as const;
 
-/* Anchor targets used by the header navigation. */
 export const nav = [
   { label: "Home", href: "#home" },
   { label: "Funcionalidades", href: "#funcionalidades" },
-  { label: "Diferenças", href: "#diferencas" },
+  { label: "Diferenciais", href: "#diferencas" },
   { label: "FAQ", href: "#faq" },
 ] as const;

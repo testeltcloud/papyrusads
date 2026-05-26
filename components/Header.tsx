@@ -22,7 +22,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <DownloadButtons />
+          <DownloadButtons variant="header" />
         </div>
 
         <MobileNav />
