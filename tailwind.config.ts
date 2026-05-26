@@ -40,7 +40,7 @@ const config: Config = {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       maxWidth: {
-        content: "1440px",
+        content: "1800px",
       },
       borderRadius: {
         card: "20px",

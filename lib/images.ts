@@ -28,8 +28,8 @@ export const images = {
   },
   heroApp: {
     src: `${dir}/hero-app.png`,
-    width: 658,
-    height: 595,
+    width: 1056,
+    height: 1432,
     alt: "Aplicativo Papyrus Ads exibindo o dashboard de anúncios",
   },
   featureDashboard: {
@@ -82,8 +82,8 @@ export const images = {
   },
   ctaPhone: {
     src: `${dir}/cta-phone.png`,
-    width: 313,
-    height: 397,
+    width: 625,
+    height: 793,
     alt: "Celular com o app Papyrus Ads aberto",
   },
 } satisfies Record<string, ImageAsset>;
