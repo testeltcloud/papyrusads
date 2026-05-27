@@ -51,15 +51,15 @@ export const images = {
     alt: "Glossário integrado explicando os termos de tráfego pago",
   },
   featureGift: {
-    src: `${dir}/feature-gift.png`,
-    width: 447,
-    height: 476,
+    src: `${dir}/imagesPersonas/3.svg`,
+    width: 1000,
+    height: 1000,
     alt: "15 dias grátis para testar, sem cartão de crédito",
   },
   diffTransparency: {
-    src: `${dir}/diff-transparency.png`,
-    width: 626,
-    height: 644,
+    src: `${dir}/imagesPersonas/2.svg`,
+    width: 1000,
+    height: 1000,
     alt: "Empresário acompanhando os anúncios pelo celular",
   },
   diffClarity: {
@@ -69,9 +69,9 @@ export const images = {
     alt: "Tela do app explicando indicadores de forma simples",
   },
   diffSecurity: {
-    src: `${dir}/diff-security.png`,
-    width: 626,
-    height: 644,
+    src: `${dir}/imagesPersonas/1.svg`,
+    width: 1000,
+    height: 1000,
     alt: "Cliente tranquila com a segurança dos próprios dados",
   },
   specialistPhones: {

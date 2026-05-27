@@ -70,7 +70,7 @@ export function DashboardFilters() {
   }, []);
 
   return (
-    <div className="mt-6 flex flex-1 items-center justify-center gap-4 px-6 pb-8 md:gap-6 md:px-8 md:pb-10">
+    <div className="flex flex-1 items-center justify-center gap-4 px-6 pt-4 pb-6 md:gap-6 md:px-8 md:pb-8">
       {/* 2×2 platform filter buttons + animated cursor */}
       <div ref={gridRef} className="relative grid flex-1 grid-cols-2 gap-3 md:gap-4">
         {buttons.map((b, i) => (

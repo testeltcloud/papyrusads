@@ -18,6 +18,7 @@ export function SpecialistCTA() {
   useGSAP(() => {
     ScrollTrigger.refresh();
 
+    /* texto entra de baixo em cascata */
     gsap.from(".specialist-text > *", {
       opacity: 0,
       y: 28,
@@ -32,11 +33,11 @@ export function SpecialistCTA() {
       },
     });
 
+    /* imagem desliza da esquerda */
     gsap.from(".specialist-image", {
       opacity: 0,
-      y: 36,
-      scale: 0.97,
-      duration: 0.9,
+      x: -60,
+      duration: 1,
       ease: "power3.out",
       immediateRender: false,
       scrollTrigger: {
@@ -51,10 +52,20 @@ export function SpecialistCTA() {
     <section className="py-8 md:py-14" ref={containerRef}>
       <div className="container-page">
         <div className="specialist-card overflow-hidden rounded-[28px] bg-navy text-white">
-          <div className="grid items-end lg:grid-cols-2 overflow-hidden">
+          <div className="grid lg:grid-cols-2 lg:items-center overflow-hidden">
 
-            {/* Text — first on mobile, second (right) on desktop */}
-            <div className="specialist-text order-1 lg:order-2 min-w-0 p-7 sm:p-10 md:p-12 lg:p-14 lg:self-center">
+            {/* Imagem — segunda no mobile (abaixo do texto), primeira (esquerda) no desktop */}
+            <div className="specialist-image order-2 lg:order-1 group flex items-end justify-center px-8 pt-6 pb-0 sm:px-14 lg:px-0 lg:pt-0 lg:self-stretch lg:items-end">
+              <AppImage
+                asset={images.specialistPhones}
+                sizes="(min-width: 1024px) 480px, 80vw"
+                className="mx-auto h-auto w-full max-w-[240px] sm:max-w-[340px] lg:max-w-[420px]
+                           transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+              />
+            </div>
+
+            {/* Texto — primeiro no mobile, segundo (direita) no desktop */}
+            <div className="specialist-text order-1 lg:order-2 min-w-0 p-7 sm:p-10 md:p-12 lg:p-14">
               <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2rem] md:text-[2.25rem]">
                 Fale com um especialista.
               </h2>
@@ -75,15 +86,6 @@ export function SpecialistCTA() {
               <p className="mt-1 text-sm text-white/70 sm:text-base">
                 Uma conversa de verdade com quem entende do assunto.
               </p>
-            </div>
-
-            {/* Image — second on mobile (below text), first (left) on desktop */}
-            <div className="specialist-image order-2 lg:order-1 flex items-end justify-center px-8 pt-0 pb-0 sm:px-12 lg:px-6 lg:pt-8">
-              <AppImage
-                asset={images.specialistPhones}
-                sizes="(min-width: 1024px) 480px, 80vw"
-                className="mx-auto h-auto w-full max-w-[240px] sm:max-w-[340px] lg:mx-0 lg:max-w-[480px]"
-              />
             </div>
 
           </div>

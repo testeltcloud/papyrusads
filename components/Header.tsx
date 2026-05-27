@@ -5,7 +5,7 @@ import { nav } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line/30 bg-white/50 backdrop-blur-xl">
       <div className="container-page flex h-16 items-center justify-between gap-6 md:h-[72px]">
         <Logo />
 

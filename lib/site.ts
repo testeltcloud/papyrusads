@@ -3,8 +3,8 @@
   URLs when they are available — every button on the site reads from here.
 */
 export const links = {
-  appStore: "#download-ios",
-  playStore: "#download-android",
+  appStore: "https://apps.apple.com/br/app/papyrus-ads/id6754659021",
+  playStore: "https://play.google.com/store/apps/details?id=com.papyrusads.app&hl=pt_BR",
   whatsapp: "https://wa.me/5500000000000",
 } as const;
 

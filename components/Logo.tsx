@@ -7,7 +7,7 @@ export function Logo({ className = "" }: { className?: string }) {
     <Link href="#home" aria-label="Papyrus Ads — ir para o início" className={`inline-flex items-center ${className}`}>
       <AppImage
         asset={images.logo}
-        className="h-8 w-auto"
+        className="h-10 w-auto"
         sizes="150px"
         priority
       />

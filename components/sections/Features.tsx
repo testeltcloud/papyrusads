@@ -113,7 +113,7 @@ export function Features() {
                 Visualize a performance real das suas campanhas num piscar de olhos. Projetado para decisões rápidas, seja na mesa do escritório ou no sofá de casa.
               </p>
             </div>
-            <div className="relative mt-8">
+            <div className="relative mt-4 flex flex-1 flex-col">
               <DashboardFilters />
             </div>
           </article>
