@@ -182,7 +182,7 @@ export function ConnectionIllustration() {
           ref={(el) => {
             tileRefs.current[i] = el;
           }}
-          className="absolute left-1/2 top-1/2 grid h-[58px] w-[58px] place-items-center rounded-2xl bg-white opacity-0 shadow-card will-change-transform"
+          className="absolute left-1/2 top-1/2 grid h-[58px] w-[58px] place-items-center rounded-2xl bg-white dark:bg-surface opacity-0 shadow-card will-change-transform"
         >
           <Image
             src={t.src}

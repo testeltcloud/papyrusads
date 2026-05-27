@@ -116,7 +116,7 @@ export function TransitionSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative z-20 flow-root bg-white pb-20 md:pb-24 lg:pb-28"
+      className="relative z-20 flow-root bg-white dark:bg-canvas pb-20 md:pb-24 lg:pb-28"
     >
       <div
         ref={mockupMainRef}
@@ -137,10 +137,10 @@ export function TransitionSection() {
         <div className="flex flex-col items-center gap-5 text-center lg:flex-row lg:items-start lg:justify-between lg:gap-0 lg:text-left">
           {/* Left Column: Badge + Heading */}
           <div className="flex flex-col items-center lg:items-start max-w-md lg:w-[42%]">
-            <div className="mb-4 inline-flex rounded-full border border-[#1d3531]/10 bg-[#1d3531]/5 px-3 py-1 text-xs font-bold tracking-wider text-[#1d3531] uppercase">
+            <div className="mb-4 inline-flex rounded-full border border-[#1d3531]/10 dark:border-white/10 bg-[#1d3531]/5 dark:bg-white/5 px-3 py-1 text-xs font-bold tracking-wider text-[#1d3531] dark:text-white/80 uppercase">
               Transparência
             </div>
-            <h2 className="text-[2.25rem] sm:text-[2.5rem] lg:text-[2.75rem] font-bold text-[#1d3531] leading-[1.1] tracking-tight">
+            <h2 className="text-[2.25rem] sm:text-[2.5rem] lg:text-[2.75rem] font-bold text-[#1d3531] dark:text-white leading-[1.1] tracking-tight">
               Indicadores claros e <br className="hidden lg:block" />
               <span className="relative inline-block whitespace-nowrap mt-1">
                 <span className="relative z-10">direto ao ponto</span>
@@ -150,9 +150,9 @@ export function TransitionSection() {
           </div>
 
           <div className="max-w-md lg:w-[38%] lg:mt-8 lg:text-right">
-            <p className="text-lg lg:text-xl leading-relaxed text-gray-600">
+            <p className="text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-body">
               Veja o que realmente importa:{" "}
-              <strong className="font-semibold text-[#1d3531]">investimento, vendas, ROAS, CPA</strong>{" "}
+              <strong className="font-semibold text-[#1d3531] dark:text-white">investimento, vendas, ROAS, CPA</strong>{" "}
               e muito mais — sem precisar de tradução da agência.
             </p>
           </div>
@@ -207,7 +207,7 @@ export function TransitionSection() {
               className={`mobile-side-card relative w-full max-w-[340px] mx-auto opacity-0 ${idx > 0 ? '-mt-16 sm:-mt-20' : ''}`}
             >
               <div className={`${item.bg} rounded-[2rem] p-3 sm:p-4 backdrop-blur-md border border-white/40 shadow-xl`}>
-                <AppImage asset={item.img} sizes="(min-width: 640px) 270px, 90vw" className="w-full h-auto rounded-[1.25rem] shadow-sm bg-white" />
+                <AppImage asset={item.img} sizes="(min-width: 640px) 270px, 90vw" className="w-full h-auto rounded-[1.25rem] shadow-sm bg-white dark:bg-surface" />
               </div>
             </div>
           ))}

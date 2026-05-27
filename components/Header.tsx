@@ -1,11 +1,12 @@
 import { Logo } from "@/components/Logo";
 import { MobileNav } from "@/components/MobileNav";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { nav } from "@/lib/site";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line/30 bg-white/50 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-line/30 bg-white/50 backdrop-blur-xl dark:bg-[#0D1929]/95 dark:border-[#1a2d45]/60">
       <div className="container-page flex h-16 items-center justify-between gap-6 md:h-[72px]">
         <Logo />
 
@@ -21,7 +22,8 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <DownloadButtons variant="header" />
         </div>
 

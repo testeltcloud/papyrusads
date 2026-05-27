@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { Logo } from "@/components/Logo";
 import { MenuIcon, CloseIcon } from "@/components/icons";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { nav } from "@/lib/site";
 
 export function MobileNav() {
@@ -34,18 +35,21 @@ export function MobileNav() {
       role="dialog"
       aria-modal="true"
       aria-label="Menu de navegação"
-      className="fixed inset-0 z-[9999] flex flex-col bg-white"
+      className="fixed inset-0 z-[9999] flex flex-col bg-white dark:bg-[#0B0F1A]"
     >
       <div className="container-page flex h-16 items-center justify-between border-b border-line/40">
         <Logo />
-        <button
-          type="button"
-          onClick={() => setOpen(false)}
-          aria-label="Fechar menu"
-          className="grid h-11 w-11 place-items-center rounded-xl text-navy transition-colors hover:bg-surface"
-        >
-          <CloseIcon className="h-6 w-6" />
-        </button>
+        <div className="flex items-center gap-1">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Fechar menu"
+            className="grid h-11 w-11 place-items-center rounded-xl text-navy transition-colors hover:bg-surface"
+          >
+            <CloseIcon className="h-6 w-6" />
+          </button>
+        </div>
       </div>
 
       <nav className="container-page mt-2 flex flex-col gap-1" aria-label="Principal">

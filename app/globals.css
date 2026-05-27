@@ -33,6 +33,16 @@
   --bg: 255 255 255; /* page background */
 }
 
+.dark {
+  --bg: 11 15 26;        /* #0B0F1A */
+  --ink: 248 250 252;    /* #F8FAFC */
+  --body: 148 163 184;   /* #94A3B8 */
+  --muted: 100 116 139;  /* #64748B */
+  --surface: 19 25 40;   /* #131928 */
+  --surface-2: 21 30 48; /* #151E30 */
+  --line: 30 42 59;      /* #1E2A3B */
+}
+
 @layer base {
   * {
     border-color: rgb(var(--line));

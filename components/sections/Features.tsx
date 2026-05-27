@@ -14,9 +14,9 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
 }
 
-const card = "group rounded-[2.5rem] bg-white border border-gray-200 shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden";
-const heading = "text-2xl lg:text-[1.75rem] font-extrabold leading-tight tracking-[-0.02em] text-[#1d3531] transition-colors duration-500";
-const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 font-medium";
+const card = "group rounded-[2.5rem] bg-white dark:bg-surface border border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden";
+const heading = "text-2xl lg:text-[1.75rem] font-extrabold leading-tight tracking-[-0.02em] text-[#1d3531] dark:text-white transition-colors duration-500";
+const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium";
 
 export function Features() {
   const containerRef = useRef<HTMLElement>(null);
@@ -78,14 +78,14 @@ export function Features() {
   return (
     <section id="funcionalidades" className="py-20 md:py-32 relative overflow-hidden" ref={containerRef}>
       {/* Background Decorative Elements for premium feel */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-[#e6f2ef]/50 to-transparent blur-3xl -z-10 rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-[#e6f2ef]/50 dark:from-[#1d3531]/15 to-transparent blur-3xl -z-10 rounded-full" />
       
       <div className="container-page relative z-10">
         <div className="feature-header grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-12">
-          <h2 className="text-[2.5rem] font-extrabold text-[#1d3531] leading-[1.1] tracking-[-0.03em] sm:text-[3.5rem]">
+          <h2 className="text-[2.5rem] font-extrabold text-[#1d3531] dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3.5rem]">
             O que o Papyrus Ads <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d3531] to-[#4caf82]">faz por você</span>
           </h2>
-          <p className="max-w-xl text-lg lg:text-[1.25rem] leading-relaxed text-gray-600 font-medium">
+          <p className="max-w-xl text-lg lg:text-[1.25rem] leading-relaxed text-gray-600 dark:text-body font-medium">
             Todas as funcionalidades que você precisa para acompanhar seus
             anúncios com clareza, segurança e sem complicações.
           </p>

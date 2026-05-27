@@ -9,6 +9,7 @@ import type { Config } from "tailwindcss";
 const withVar = (name: string) => `rgb(var(${name}) / <alpha-value>)`;
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -35,6 +36,7 @@ const config: Config = {
         surface: withVar("--surface"),
         "surface-2": withVar("--surface-2"),
         line: withVar("--line"),
+        canvas: withVar("--bg"),
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],

@@ -44,7 +44,7 @@ export function Footer() {
                   <a
                     href={href}
                     aria-label={label}
-                    className="grid h-10 w-10 place-items-center rounded-xl bg-white text-brand shadow-sm ring-1 ring-line transition-colors hover:bg-brand hover:text-white"
+                    className="grid h-10 w-10 place-items-center rounded-xl bg-white dark:bg-surface text-brand shadow-sm ring-1 ring-line transition-colors hover:bg-brand hover:text-white"
                   >
                     <Icon className="h-[18px] w-[18px]" />
                   </a>
