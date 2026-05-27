@@ -85,7 +85,7 @@ export function TransitionSection() {
       gsap.fromTo(heading, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
       // Mobile cards alternating side entrance
-      const mobileCards = gsap.utils.toArray(".mobile-side-card");
+      const mobileCards = gsap.utils.toArray(".mobile-side-card") as HTMLElement[];
       mobileCards.forEach((card, index) => {
         // For the first card, just fade and slide up
         if (index === 0) {
