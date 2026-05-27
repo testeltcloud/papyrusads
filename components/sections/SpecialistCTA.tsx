@@ -51,10 +51,10 @@ export function SpecialistCTA() {
     <section className="py-8 md:py-14" ref={containerRef}>
       <div className="container-page">
         <div className="specialist-card overflow-hidden rounded-[28px] bg-navy text-white">
-          <div className="grid items-end lg:grid-cols-2">
+          <div className="grid items-end lg:grid-cols-2 overflow-hidden">
 
             {/* Text — first on mobile, second (right) on desktop */}
-            <div className="specialist-text order-1 lg:order-2 p-7 sm:p-10 md:p-12 lg:p-14 lg:self-center">
+            <div className="specialist-text order-1 lg:order-2 min-w-0 p-7 sm:p-10 md:p-12 lg:p-14 lg:self-center">
               <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2rem] md:text-[2.25rem]">
                 Fale com um especialista.
               </h2>
