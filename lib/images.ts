@@ -140,6 +140,61 @@ export const images = {
     height: 258,
     alt: "Metric Card 9",
   },
+  mockupBorder: {
+    src: `${dir}/mockup-border.svg`,
+    width: 329,
+    height: 663,
+    alt: "Borda de Mockup Celular",
+  },
+  mockupMain: {
+    src: `${dir}/mockup-main.svg`,
+    width: 329,
+    height: 663,
+    alt: "Mockup Celular Central",
+  },
+  foto1: {
+    src: `${dir}/foto1.svg`,
+    width: 210,
+    height: 430,
+    alt: "Mockup Celular lateral esquerdo",
+  },
+  foto2: {
+    src: `${dir}/foto2.svg`,
+    width: 210,
+    height: 430,
+    alt: "Mockup Celular lateral direito",
+  },
+  /* "Dashboard simples e visual" pieces (trimmed from /images/adc). */
+  dashTodos: {
+    src: `${dir}/adc/t5.png`,
+    width: 841,
+    height: 213,
+    alt: "Filtro por todas as plataformas",
+  },
+  dashGoogle: {
+    src: `${dir}/adc/t8.png`,
+    width: 841,
+    height: 213,
+    alt: "Filtro por Google Ads",
+  },
+  dashMeta: {
+    src: `${dir}/adc/t6.png`,
+    width: 841,
+    height: 213,
+    alt: "Filtro por Meta Ads",
+  },
+  dashTiktok: {
+    src: `${dir}/adc/t7.png`,
+    width: 841,
+    height: 213,
+    alt: "Filtro por TikTok Ads",
+  },
+  dashFiltro: {
+    src: `${dir}/adc/t9.png`,
+    width: 823,
+    height: 637,
+    alt: "Filtro de período do dashboard",
+  },
 } satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof images;
