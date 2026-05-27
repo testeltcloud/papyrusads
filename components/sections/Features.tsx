@@ -22,7 +22,8 @@ export function Features() {
   const containerRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
-    // Reveal text elements with a strong, modern entrance
+    ScrollTrigger.refresh();
+
     gsap.from(".feature-header > *", {
       opacity: 0,
       y: 40,
@@ -30,36 +31,36 @@ export function Features() {
       duration: 1.2,
       stagger: 0.2,
       ease: "power4.out",
+      immediateRender: false,
       scrollTrigger: {
         trigger: ".feature-header",
         start: "top 85%",
         toggleActions: "play none none none",
+        once: true,
       },
     });
 
-    // Animate bento grid cards individually for better mobile experience
     const cards = gsap.utils.toArray(".bento-card");
-    
+
     cards.forEach((card: any) => {
-      // Create a timeline for each card
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: card,
-          start: "top 90%", // Trigger when the top of the card enters the viewport
-          toggleActions: "play none none none", // Play once and keep it visible
+          start: "top 95%",
+          toggleActions: "play none none none",
+          once: true,
         }
       });
 
-      // Animate the card itself
       tl.from(card, {
         opacity: 0,
         y: 40,
         scale: 0.98,
         duration: 0.8,
         ease: "power3.out",
+        immediateRender: false,
       });
 
-      // Animate the content inside the card
       const contentElements = card.querySelectorAll(".bento-card-content > *");
       if (contentElements.length > 0) {
         tl.from(contentElements, {
@@ -68,6 +69,7 @@ export function Features() {
           duration: 0.6,
           stagger: 0.1,
           ease: "power2.out",
+          immediateRender: false,
         }, "-=0.4");
       }
     });
