@@ -66,7 +66,7 @@ export function DownloadButtons({
     <div
       className={`flex ${stacked ? "flex-col" : "flex-col md:flex-row"} gap-3 ${className}`}
     >
-      {badge(links.appStore,  "Baixar o Papyrus Ads na App Store",   "/images/loja/appstore.png", "Baixar na",     "App Store",   "bg-brand",  "hover:bg-brand-dark")}
+      {badge(links.appStore,  "Baixar o Papyrus Ads na App Store",   "/images/loja/appstore.png", "Disponível na",     "App Store",   "bg-brand",  "hover:bg-brand-dark")}
       {badge(links.playStore, "Baixar o Papyrus Ads no Google Play", "/images/loja/google.png",   "Disponível no", "Google Play", "bg-green",  "hover:bg-green-dark")}
     </div>
   );
