@@ -150,7 +150,7 @@ export function Features() {
                 </p>
               </div>
             </article>
-            <DownloadButtons className="w-full [&>a]:flex-1" size="lg" block />
+            <DownloadButtons className="w-full" size="lg" block />
           </div>
         </div>
       </div>

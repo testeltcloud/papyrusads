@@ -15,7 +15,7 @@ type Props = {
 
 const sizes = {
   md: "h-11 px-5 text-[0.95rem]",
-  lg: "h-12 px-6 text-base",
+  lg: "h-[52px] px-6 text-base md:h-12",
 } as const;
 
 export function DownloadButtons({
@@ -58,7 +58,7 @@ export function DownloadButtons({
 
   return (
     <div
-      className={`flex ${stacked ? "flex-col" : "flex-col sm:flex-row"} gap-3 ${className}`}
+      className={`flex ${stacked ? "flex-col" : "flex-col md:flex-row"} gap-3 ${className}`}
     >
       {variant === "header" ? [androidBtn, iosBtn] : [iosBtn, androidBtn]}
     </div>
