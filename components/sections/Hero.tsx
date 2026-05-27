@@ -31,101 +31,77 @@ export function Hero() {
       { rotation: 10, opacity: 1, duration: 1.2, ease: "power3.out", delay: 0.25, transformOrigin: "bottom center" }
     );
 
-    // ── Desktop cursor showcase (once, after phones settle) ─────────────────
-    const mm = gsap.matchMedia();
+    // ── Cursor showcase — runs once after phones settle, all screen sizes ─────
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     let cursorTl: gsap.core.Timeline | undefined;
-    let dc: gsap.core.Tween | undefined;
+    const dc = gsap.delayedCall(2.05, () => {
+      const cursor     = cursorRef.current;
+      const leftPhone  = mockupLeftRef.current;
+      const rightPhone = mockupRightRef.current;
+      const row        = phonesRowRef.current;
+      if (!cursor || !leftPhone || !rightPhone || !row) return;
 
-    mm.add("(min-width: 1024px)", () => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      // Responsive click values — smaller movements on mobile to avoid overflow
+      const desktop = window.innerWidth >= 1024;
+      const xOff    = desktop ? 55  : 22;
+      const scaleV  = desktop ? 1.16 : 1.08;
+      const yOff    = desktop ? -18 : -8;
 
-      // Wait for phones to finish fanning + a beat of breathing room
-      dc = gsap.delayedCall(2.05, () => {
-        const cursor    = cursorRef.current;
-        const leftPhone = mockupLeftRef.current;
-        const rightPhone = mockupRightRef.current;
-        const row       = phonesRowRef.current;
-        if (!cursor || !leftPhone || !rightPhone || !row) return;
-
-        // Calculate phone centres relative to the phones row container
-        const rowRect = row.getBoundingClientRect();
-        const toLocal = (el: HTMLElement) => {
-          const r = el.getBoundingClientRect();
-          return {
-            x: r.left + r.width  * 0.50 - rowRect.left - 11,
-            y: r.top  + r.height * 0.38 - rowRect.top  -  5,
-          };
+      const rowRect = row.getBoundingClientRect();
+      const toLocal = (el: HTMLElement) => {
+        const r = el.getBoundingClientRect();
+        return {
+          x: r.left + r.width  * 0.50 - rowRect.left - 11,
+          y: r.top  + r.height * 0.38 - rowRect.top  -  5,
         };
-
-        const right = toLocal(rightPhone);
-        const left  = toLocal(leftPhone);
-
-        // Park cursor off-screen to the right, invisible
-        gsap.set(cursor, { x: right.x + 220, y: right.y + 15, opacity: 0, scale: 1 });
-
-        cursorTl = gsap.timeline();
-
-        cursorTl
-          // ── Slide in from right → land on right phone ──────────────────
-          .to(cursor, { opacity: 1, duration: 0.22, ease: "power2.out" })
-          .to(cursor, {
-            x: right.x, y: right.y,
-            duration: 0.72, ease: "power3.inOut",
-          }, "<0.04")
-
-          // Click: phone straightens, moves away from centre, scales up
-          .to(cursor, { scale: 0.76, duration: 0.11, ease: "power2.in" })
-          .to(rightPhone, {
-            rotation: 0, x: 55, y: -18, scale: 1.16,
-            filter: "drop-shadow(0 28px 44px rgba(17,93,140,0.35))",
-            duration: 0.38, ease: "back.out(1.6)",
-          }, "<")
-          .to(cursor, { scale: 1, duration: 0.14, ease: "back.out(2.5)" })
-
-          // Dwell
-          .to({}, { duration: 0.55 })
-
-          // ── Right resets, cursor sweeps to left phone ───────────────────
-          .to(rightPhone, {
-            rotation: 10, x: 0, y: 0, scale: 1, filter: "none",
-            duration: 0.50, ease: "power3.inOut",
-          })
-          .to(cursor, {
-            x: left.x, y: left.y,
-            duration: 0.82, ease: "power3.inOut",
-          }, "<0.14")
-
-          // Click left phone
-          .to(cursor, { scale: 0.76, duration: 0.11, ease: "power2.in" })
-          .to(leftPhone, {
-            rotation: 0, x: -55, y: -18, scale: 1.16,
-            filter: "drop-shadow(0 28px 44px rgba(17,93,140,0.35))",
-            duration: 0.38, ease: "back.out(1.6)",
-          }, "<")
-          .to(cursor, { scale: 1, duration: 0.14, ease: "back.out(2.5)" })
-
-          // Dwell
-          .to({}, { duration: 0.55 })
-
-          // ── Left resets, cursor exits ───────────────────────────────────
-          .to(leftPhone, {
-            rotation: -10, x: 0, y: 0, scale: 1, filter: "none",
-            duration: 0.50, ease: "power3.inOut",
-          })
-          .to(cursor, {
-            x: left.x - 200, y: left.y + 30,
-            opacity: 0,
-            duration: 0.44, ease: "power2.in",
-          }, "<0.1");
-      });
-
-      return () => {
-        dc?.kill();
-        cursorTl?.kill();
       };
+
+      const right = toLocal(rightPhone);
+      const left  = toLocal(leftPhone);
+
+      gsap.set(cursor, { x: right.x + 180, y: right.y + 15, opacity: 0, scale: 1 });
+
+      cursorTl = gsap.timeline();
+
+      cursorTl
+        // ── Slide in → right phone ────────────────────────────────────────
+        .to(cursor, { opacity: 1, duration: 0.22, ease: "power2.out" })
+        .to(cursor, { x: right.x, y: right.y, duration: 0.72, ease: "power3.inOut" }, "<0.04")
+
+        // Click: phone straightens, drifts out, scales up
+        .to(cursor, { scale: 0.76, duration: 0.11, ease: "power2.in" })
+        .to(rightPhone, {
+          rotation: 0, x: xOff, y: yOff, scale: scaleV,
+          filter: "drop-shadow(0 28px 44px rgba(17,93,140,0.35))",
+          duration: 0.38, ease: "back.out(1.6)",
+        }, "<")
+        .to(cursor, { scale: 1, duration: 0.14, ease: "back.out(2.5)" })
+        .to({}, { duration: 0.55 })
+
+        // ── Right resets, cursor sweeps to left phone ──────────────────────
+        .to(rightPhone, { rotation: 10, x: 0, y: 0, scale: 1, filter: "none", duration: 0.50, ease: "power3.inOut" })
+        .to(cursor, { x: left.x, y: left.y, duration: 0.82, ease: "power3.inOut" }, "<0.14")
+
+        // Click left phone
+        .to(cursor, { scale: 0.76, duration: 0.11, ease: "power2.in" })
+        .to(leftPhone, {
+          rotation: 0, x: -xOff, y: yOff, scale: scaleV,
+          filter: "drop-shadow(0 28px 44px rgba(17,93,140,0.35))",
+          duration: 0.38, ease: "back.out(1.6)",
+        }, "<")
+        .to(cursor, { scale: 1, duration: 0.14, ease: "back.out(2.5)" })
+        .to({}, { duration: 0.55 })
+
+        // ── Left resets, cursor exits ──────────────────────────────────────
+        .to(leftPhone, { rotation: -10, x: 0, y: 0, scale: 1, filter: "none", duration: 0.50, ease: "power3.inOut" })
+        .to(cursor, { x: left.x - 180, y: left.y + 30, opacity: 0, duration: 0.44, ease: "power2.in" }, "<0.1");
     });
 
-    return () => { mm.revert(); };
+    return () => {
+      dc.kill();
+      cursorTl?.kill();
+    };
   }, []);
 
   return (
@@ -172,7 +148,7 @@ export function Hero() {
           <div
             ref={cursorRef}
             aria-hidden
-            className="pointer-events-none absolute left-0 top-0 z-20 hidden opacity-0 will-change-transform drop-shadow-md lg:block"
+            className="pointer-events-none absolute left-0 top-0 z-20 opacity-0 will-change-transform drop-shadow-md"
           >
             <svg width="30" height="30" viewBox="0 0 24 24" fill="#ffffff" stroke="#0B3B5A" strokeWidth="1.4" strokeLinejoin="round" strokeLinecap="round">
               <path d="M9 11.5V5.4a1.55 1.55 0 0 1 3.1 0v4.9m0-1.4a1.55 1.55 0 0 1 3.1 0v2m0-1.3a1.55 1.55 0 0 1 3.1 0V16c0 3.2-2.1 5.4-5.4 5.4h-1.3c-1.7 0-2.8-.6-4-1.9l-3.1-3.4a1.55 1.55 0 0 1 2.2-2.2l1.6 1.5V11.5Z" />

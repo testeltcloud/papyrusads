@@ -84,27 +84,18 @@ export function TransitionSection() {
     mm.add("(max-width: 1023px)", () => {
       gsap.fromTo(heading, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
-      // Mobile cards alternating side entrance
+      // 2-col layout: even index = left card (enters from left), odd = right card (from right)
       const mobileCards = gsap.utils.toArray(".mobile-side-card") as HTMLElement[];
       mobileCards.forEach((card, index) => {
-        // For the first card, just fade and slide up
-        if (index === 0) {
-          gsap.fromTo(card, { opacity: 0, y: 40 }, { 
-            opacity: 1, y: 0, duration: 0.8, ease: "power3.out",
-            scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none reverse" }
-          });
-        } else {
-          // Odd indexes from left (-80), Even from right (80)
-          const startX = index % 2 !== 0 ? -80 : 80;
-          gsap.fromTo(card, { opacity: 0, x: startX }, {
-            opacity: 1, x: 0, duration: 0.8, ease: "back.out(1.2)",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 85%",
-              toggleActions: "play none none reverse"
-            }
-          });
-        }
+        const startX = index % 2 === 0 ? -70 : 70;
+        gsap.fromTo(card, { opacity: 0, x: startX }, {
+          opacity: 1, x: 0, duration: 0.6, ease: "back.out(1.2)",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 100%",
+            once: true,
+          },
+        });
       });
     });
 
@@ -189,25 +180,25 @@ export function TransitionSection() {
         </div>
       </div>
 
-      {/* Mobile Card List — Animated from sides and grouped (overlapping) */}
-      <div className="lg:hidden w-full px-4 mt-2 pb-8 overflow-hidden">
-        <div className="flex flex-col">
+      {/* Mobile Card List — 2-column pairs, alternating left/right entrance */}
+      <div className="lg:hidden w-full px-3 mt-2 pb-8 overflow-hidden">
+        <div className="flex flex-col gap-2">
           {[
-            { img: images.metricCard1, bg: 'bg-[#3b82f6]/20' }, // blue
-            { img: images.metricCard2, bg: 'bg-[#10b981]/20' }, // emerald
-            { img: images.metricCard3, bg: 'bg-[#8b5cf6]/20' }, // violet
-            { img: images.metricCard4, bg: 'bg-[#f43f5e]/20' }, // rose
-            { img: images.metricCard5, bg: 'bg-[#f59e0b]/20' }, // amber
-            { img: images.metricCard6, bg: 'bg-[#0ea5e9]/20' }, // sky
-            { img: images.metricCard7, bg: 'bg-[#ec4899]/20' }, // pink
-            { img: images.metricCard9, bg: 'bg-[#6366f1]/20' }  // indigo
-          ].map((item, idx) => (
-            <div 
-              key={idx} 
-              className={`mobile-side-card relative w-full max-w-[340px] mx-auto opacity-0 ${idx > 0 ? '-mt-16 sm:-mt-20' : ''}`}
-            >
-              <div className={`${item.bg} rounded-[2rem] p-3 sm:p-4 backdrop-blur-md border border-white/40 shadow-xl`}>
-                <AppImage asset={item.img} sizes="(min-width: 640px) 270px, 90vw" className="w-full h-auto rounded-[1.25rem] shadow-sm bg-white dark:bg-surface" />
+            [images.metricCard1, images.metricCard2],
+            [images.metricCard3, images.metricCard4],
+            [images.metricCard5, images.metricCard6],
+            [images.metricCard7, images.metricCard9],
+          ].map(([left, right], rowIdx) => (
+            <div key={rowIdx} className="flex gap-2">
+              <div className="mobile-side-card min-w-0 flex-1 opacity-0">
+                <div className="rounded-[1.25rem] p-1.5 border border-white/[0.08]">
+                  <AppImage asset={left}  sizes="45vw" className="w-full h-auto rounded-[0.75rem] bg-white dark:bg-surface" />
+                </div>
+              </div>
+              <div className="mobile-side-card min-w-0 flex-1 opacity-0">
+                <div className="rounded-[1.25rem] p-1.5 border border-white/[0.08]">
+                  <AppImage asset={right} sizes="45vw" className="w-full h-auto rounded-[0.75rem] bg-white dark:bg-surface" />
+                </div>
               </div>
             </div>
           ))}
