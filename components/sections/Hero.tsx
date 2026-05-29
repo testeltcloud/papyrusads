@@ -42,7 +42,7 @@ export function Hero() {
 
         {/* ── Phone column with card ── */}
         <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
-          <div className="relative w-full aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-[#f4f5f7] dark:bg-surface-2 shadow-soft flex justify-center">
+          <div className="relative w-full aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-transparent dark:bg-surface-2 dark:shadow-soft flex justify-center">
             <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-[85%] sm:w-[80%]">
               <AppImage
                 asset={images.heroApp}
