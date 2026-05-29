@@ -16,7 +16,7 @@ export function Hero() {
 
         {/* ── Text column ── */}
         <div className="flex w-full flex-col items-center text-center lg:items-start lg:text-left lg:flex-1 lg:max-w-[600px] xl:max-w-[680px]">
-          <h1 className="text-[2rem] xs:text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] xl:text-[4.8rem] font-normal leading-[1.08] tracking-tight text-ink">
+          <h1 className="hero-enter hero-enter-delay-1 text-[2rem] xs:text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] xl:text-[4.8rem] font-normal leading-[1.08] tracking-tight text-ink">
             <span className="block whitespace-nowrap">
               Você no{" "}
               <span className="inline-block rounded-[0.4em] bg-mint px-3 py-1 text-ink leading-tight shadow-sm">
@@ -28,20 +28,22 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl font-medium text-body">
+          <p className="hero-enter hero-enter-delay-2 mt-6 text-lg sm:text-xl font-medium text-body">
             Sem complicações. Sem enrolação.
           </p>
 
-          <p className="mt-4 max-w-[480px] text-base sm:text-lg leading-relaxed text-body">
+          <p className="hero-enter hero-enter-delay-3 mt-4 max-w-[480px] text-base sm:text-lg leading-relaxed text-body">
             Veja os dados que realmente importam, entenda seus
             resultados e tome decisões com mais segurança.
           </p>
 
-          <DownloadButtons className="mt-10 w-full sm:w-auto" size="lg" />
+          <div className="hero-enter hero-enter-delay-4">
+            <DownloadButtons className="mt-10 w-full sm:w-auto" size="lg" />
+          </div>
         </div>
 
         {/* ── Phone column with card ── */}
-        <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
+        <div className="hero-enter-right relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
           <div className="relative w-full aspect-[4/4.0] overflow-hidden rounded-[2.5rem] bg-transparent dark:bg-surface-2 dark:shadow-soft flex justify-center">
             <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-[85%] sm:w-[80%]">
               <AppImage

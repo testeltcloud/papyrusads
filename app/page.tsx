@@ -7,10 +7,12 @@ import { Differentials } from "@/components/sections/Differentials";
 import { SpecialistCTA } from "@/components/sections/SpecialistCTA";
 import { FAQ } from "@/components/sections/FAQ";
 import { AboutCTA } from "@/components/sections/AboutCTA";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function HomePage() {
   return (
     <>
+      <ScrollReveal />
       <Header />
       {/* overflow-x-clip stops the rotated hero phones from widening the page
           (horizontal only — vertical overflow stays visible for the phone z-index

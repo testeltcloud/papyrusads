@@ -51,7 +51,7 @@ export function SpecialistCTA() {
   return (
     <section className="py-8 md:py-14" ref={containerRef}>
       <div className="container-page">
-        <div className="specialist-card overflow-hidden rounded-[28px] bg-navy text-white">
+        <div data-reveal className="specialist-card overflow-hidden rounded-[28px] bg-navy text-white">
           <div className="grid lg:grid-cols-2 lg:items-center overflow-hidden">
 
             {/* Imagem — segunda no mobile (abaixo do texto), primeira (esquerda) no desktop */}

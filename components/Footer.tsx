@@ -26,7 +26,7 @@ export function Footer() {
   return (
     <footer className="border-t border-line bg-surface-2">
       <div className="container-page py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+        <div data-reveal className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-5">
             <Logo />
