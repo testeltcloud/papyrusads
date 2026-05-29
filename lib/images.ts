@@ -63,9 +63,9 @@ export const images = {
     alt: "Empresário acompanhando os anúncios pelo celular",
   },
   diffClarity: {
-    src: `${dir}/diff-clarity.png`,
-    width: 626,
-    height: 644,
+    src: `${dir}/semfundopapyrus.svg`,
+    width: 1000,
+    height: 1000,
     alt: "Tela do app explicando indicadores de forma simples",
   },
   diffSecurity: {
