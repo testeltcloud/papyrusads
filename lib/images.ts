@@ -44,6 +44,12 @@ export const images = {
     height: 637,
     alt: "Lista de indicadores: investimento, vendas, ROAS e CPA",
   },
+  featureTodos: {
+    src: `${dir}/todos/todosJuntos.png`,
+    width: 1016,
+    height: 1139,
+    alt: "Lista de indicadores do app: investimento, vendas, ROAS, CPA e mais",
+  },
   featureGlossary: {
     src: `${dir}/feature-glossary.png`,
     width: 572,

@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 }
 
 const card = "group rounded-[2.5rem] bg-white dark:bg-surface border border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden";
-const heading = "text-2xl lg:text-[1.75rem] font-extrabold leading-tight tracking-[-0.02em] text-[#1d3531] dark:text-white transition-colors duration-500";
+const heading = "text-2xl lg:text-[1.75rem] font-medium leading-tight tracking-tight text-ink dark:text-white transition-colors duration-500";
 const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium";
 
 export function Features() {
@@ -81,11 +81,11 @@ export function Features() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-[#e6f2ef]/50 dark:from-[#1d3531]/15 to-transparent blur-3xl -z-10 rounded-full" />
       
       <div className="container-page relative z-10">
-        <div className="feature-header grid gap-6 lg:grid-cols-2 lg:items-end lg:gap-12">
-          <h2 className="text-[2.5rem] font-extrabold text-[#1d3531] dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3.5rem]">
-            O que o Papyrus Ads <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1d3531] to-[#4caf82]">faz por você</span>
+        <div className="feature-header flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
+          <h2 className="text-[2.5rem] font-medium text-brand dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] lg:whitespace-nowrap">
+            O que o Papyrus Ads faz por você
           </h2>
-          <p className="max-w-xl text-lg lg:text-[1.25rem] leading-relaxed text-gray-600 dark:text-body font-medium">
+          <p className="max-w-xl text-lg lg:text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium lg:text-right">
             Todas as funcionalidades que você precisa para acompanhar seus
             anúncios com clareza, segurança e sem complicações.
           </p>
@@ -118,29 +118,48 @@ export function Features() {
             </div>
           </article>
 
-          <article className={`${card} bento-card overflow-hidden lg:col-span-6 flex flex-col`}>
-             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
+          {/* Indicadores card */}
+          <article className={`${card} bento-card overflow-hidden lg:col-span-4 flex flex-col`}>
+            <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
+              <h3 className={heading}>Indicadores claros e direto ao ponto</h3>
+              <p className={body}>
+                Veja o que realmente importa: investimento, vendas, ROAS, CPA e muito mais — sem precisar de tradução da agência.
+              </p>
+            </div>
+            <div className="mt-6 flex flex-1 items-end justify-center pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out overflow-hidden">
+              <AppImage
+                asset={images.featureTodos}
+                sizes="(min-width: 1024px) 280px, 80vw"
+                className="h-auto w-full max-w-[260px] lg:max-w-[280px] drop-shadow-xl"
+              />
+            </div>
+          </article>
+
+          {/* Glossário card */}
+          <article className={`${card} bento-card overflow-hidden lg:col-span-4 flex flex-col`}>
+            <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={heading}>Glossário integrado</h3>
               <p className={body}>
                 Não sabe o que é CAC ou ROAS? O app te explica. Com definições simples e exemplos, você aprende enquanto usa.
               </p>
             </div>
-            <div className="mt-6 flex flex-1 items-end justify-center px-0 pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div className="mt-6 flex flex-1 items-end justify-center pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out overflow-hidden">
               <AppImage
                 asset={images.featureGlossary}
-                sizes="(min-width: 1024px) 340px, 80vw"
-                className="h-auto w-full max-w-[300px] lg:max-w-[340px] drop-shadow-2xl"
+                sizes="(min-width: 1024px) 280px, 80vw"
+                className="h-auto w-full max-w-[260px] lg:max-w-[280px] drop-shadow-2xl"
               />
             </div>
           </article>
-          
-          <div className="bento-card lg:col-span-6 flex flex-col justify-between gap-6">
+
+          {/* 15 dias grátis + download */}
+          <div className="bento-card lg:col-span-4 flex flex-col justify-between gap-6">
             <article className={`${card} flex flex-col flex-1 overflow-hidden group`}>
-              <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[180px] md:min-h-[240px] overflow-hidden">
+              <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[160px] md:min-h-[200px] overflow-hidden">
                 <AppImage
                   asset={images.featureGift}
-                  sizes="(min-width: 1024px) 280px, 70vw"
-                  className="h-auto w-full max-w-[220px] md:max-w-[280px] scale-100 md:scale-[1.1] origin-center transition-transform duration-700 group-hover:scale-105 md:group-hover:scale-[1.18]"
+                  sizes="(min-width: 1024px) 220px, 70vw"
+                  className="h-auto w-full max-w-[180px] md:max-w-[220px] scale-100 md:scale-[1.1] origin-center transition-transform duration-700 group-hover:scale-105 md:group-hover:scale-[1.18]"
                 />
               </div>
               <div className="bento-card-content p-8 pt-0 md:p-10 md:pt-0 relative z-20">

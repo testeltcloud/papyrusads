@@ -34,7 +34,7 @@ export function AboutCTA() {
                 Baixe agora o app e veja como é simples entender seus
                 resultados.
               </h3>
-              <DownloadButtons className="mt-6" />
+              <DownloadButtons className="mt-6" variant="white" />
             </div>
             <AppImage
               asset={images.ctaPhone}
