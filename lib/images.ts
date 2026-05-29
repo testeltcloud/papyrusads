@@ -92,6 +92,12 @@ export const images = {
     height: 793,
     alt: "Celular com o app Papyrus Ads aberto",
   },
+  phoneAssas: {
+    src: `${dir}/adc/phoneAssas.png`,
+    width: 822,
+    height: 876,
+    alt: "Celular exibindo dashboard do Papyrus Ads com métricas",
+  },
   metricCard1: {
     src: `${dir}/metric-card-1.png`,
     width: 508,

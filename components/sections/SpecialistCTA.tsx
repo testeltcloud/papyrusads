@@ -59,7 +59,8 @@ export function SpecialistCTA() {
               <AppImage
                 asset={images.specialistPhones}
                 sizes="(min-width: 1024px) 480px, 80vw"
-                className="mx-auto h-auto w-full max-w-[240px] sm:max-w-[340px] lg:max-w-[420px]
+                className="mx-auto h-auto w-full max-w-[210px] sm:max-w-[300px] lg:max-w-[370px]
+                           my-4 lg:my-6
                            transition-transform duration-500 ease-out group-hover:scale-[1.04]"
               />
             </div>

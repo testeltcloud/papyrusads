@@ -27,7 +27,7 @@ export function AboutCTA() {
         </div>
 
         {/* Download box */}
-        <div className="overflow-hidden rounded-[28px] bg-navy text-white">
+        <div className="overflow-hidden rounded-[28px] text-white" style={{ backgroundColor: '#105c8b' }}>
           <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:gap-4 md:p-10">
             <div className="flex-1">
               <h3 className="text-[1.6rem] font-semibold leading-snug text-white">
@@ -37,9 +37,9 @@ export function AboutCTA() {
               <DownloadButtons className="mt-6" variant="white" />
             </div>
             <AppImage
-              asset={images.ctaPhone}
-              sizes="(min-width: 640px) 220px, 60vw"
-              className="mx-auto h-auto w-40 shrink-0 sm:mx-0 sm:w-[200px]"
+              asset={images.phoneAssas}
+              sizes="(min-width: 640px) 240px, 70vw"
+              className="mx-auto h-auto w-44 shrink-0 sm:mx-0 sm:w-[240px]"
             />
           </div>
         </div>
