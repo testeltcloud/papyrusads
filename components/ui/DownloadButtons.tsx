@@ -16,9 +16,9 @@ export function DownloadButtons({
   className = "",
 }: Props) {
   const isLg = size === "lg";
-  const pad     = isLg ? "px-6 py-3.5" : "px-5 py-2.5";
+  const pad     = isLg ? "px-4 sm:px-6 py-3" : "px-3 sm:px-5 py-2.5";
   const iconSz  = isLg ? "w-5 h-5" : "w-4 h-4";
-  const textSz  = isLg ? "text-[15px]" : "text-[13px]";
+  const textSz  = isLg ? "text-[13px] sm:text-[15px]" : "text-[12px] sm:text-[13px]";
   const stretch = block ? "w-full justify-center" : "";
 
   const rowCls = stacked ? "flex-col" : "flex-row";
