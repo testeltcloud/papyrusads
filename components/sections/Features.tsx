@@ -85,7 +85,7 @@ export function Features() {
           <h2 className="text-[2.5rem] font-medium text-brand dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] lg:whitespace-nowrap">
             O que o Papyrus Ads faz por você
           </h2>
-          <p className="max-w-xl text-lg lg:text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium lg:text-right">
+          <p className="max-w-[340px] text-lg lg:text-[1.05rem] leading-relaxed text-gray-600 dark:text-body font-medium lg:text-right">
             Todas as funcionalidades que você precisa para acompanhar seus
             anúncios com clareza, segurança e sem complicações.
           </p>
