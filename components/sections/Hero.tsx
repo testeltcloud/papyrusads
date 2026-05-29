@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative z-10 flex min-h-[520px] md:min-h-[580px] lg:min-h-[calc(82svh-72px)] flex-col items-center justify-center overflow-hidden bg-canvas px-4 py-14 md:px-8 md:py-16"
+      className="relative z-10 flex min-h-[520px] md:min-h-[580px] lg:min-h-[calc(82svh-72px)] flex-col items-center justify-center overflow-hidden bg-canvas px-4 pt-20 pb-10 md:px-8 md:pt-24 md:pb-12"
     >
       {/* Ambient blobs */}
       <div aria-hidden className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/[0.06] dark:bg-brand/[0.12] blur-3xl" />
@@ -42,7 +42,7 @@ export function Hero() {
 
         {/* ── Phone column with card ── */}
         <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
-          <div className="relative w-full aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-transparent dark:bg-surface-2 dark:shadow-soft flex justify-center">
+          <div className="relative w-full aspect-[4/4.0] overflow-hidden rounded-[2.5rem] bg-transparent dark:bg-surface-2 dark:shadow-soft flex justify-center">
             <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-[85%] sm:w-[80%]">
               <AppImage
                 asset={images.heroApp}
