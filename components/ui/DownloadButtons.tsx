@@ -16,16 +16,17 @@ export function DownloadButtons({
   className = "",
 }: Props) {
   const isLg = size === "lg";
-  const pad     = isLg ? "px-2.5 sm:px-6 py-2.5 sm:py-3" : "px-2.5 sm:px-5 py-2 sm:py-2.5";
+  const pad     = isLg ? "px-2 sm:px-6 py-2.5 sm:py-3" : "px-2 sm:px-5 py-2 sm:py-2.5";
   const iconSz  = isLg ? "w-4 h-4 sm:w-5 sm:h-5" : "w-3.5 h-3.5 sm:w-4 sm:h-4";
-  const textSz  = isLg ? "text-[11px] sm:text-[15px]" : "text-[10px] sm:text-[13px]";
+  const textSz  = isLg ? "text-[11px] sm:text-[15px]" : "text-[11px] sm:text-[13px]";
   const stretch = block ? "w-full justify-center" : "";
 
   const rowCls = stacked ? "flex-col" : "flex-row";
+  const gapCls  = stacked ? "gap-3" : "gap-1.5 sm:gap-3";
   const itemFlex = stacked ? "" : "flex-1 justify-center";
 
   return (
-    <div className={`flex ${rowCls} gap-3 ${className}`}>
+    <div className={`flex ${rowCls} ${gapCls} ${className}`}>
       <a
         href={links.appStore}
         aria-label="Baixar o Papyrus Ads na App Store"
