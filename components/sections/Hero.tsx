@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative z-10 flex min-h-[calc(100svh-64px)] flex-col items-center justify-center overflow-hidden bg-canvas px-4 py-20 md:min-h-[calc(100svh-72px)] md:px-8 md:py-24"
+      className="relative z-10 flex min-h-[520px] md:min-h-[580px] lg:min-h-[calc(82svh-72px)] flex-col items-center justify-center overflow-hidden bg-canvas px-4 py-14 md:px-8 md:py-16"
     >
       {/* Ambient blobs */}
       <div aria-hidden className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/[0.06] dark:bg-brand/[0.12] blur-3xl" />
