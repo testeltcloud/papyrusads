@@ -1,11 +1,7 @@
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
-import {
-  InstagramIcon,
-  FacebookIcon,
-  LinkedInIcon,
-  WhatsAppIcon,
-} from "@/components/icons";
+import { WhatsAppIcon } from "@/components/icons";
 import { links } from "@/lib/site";
 
 const usefulLinks = [
@@ -21,9 +17,9 @@ const legalLinks = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "#", Icon: InstagramIcon },
-  { label: "Facebook", href: "#", Icon: FacebookIcon },
-  { label: "LinkedIn", href: "#", Icon: LinkedInIcon },
+  { label: "Instagram", src: "/images/adc/instagran.png" },
+  { label: "Facebook",  src: "/images/adc/Facebook.png"  },
+  { label: "LinkedIn",  src: "/images/adc/in.png"        },
 ];
 
 export function Footer() {
@@ -39,14 +35,14 @@ export function Footer() {
               anúncios sem complicação.
             </p>
             <ul className="mt-6 flex items-center gap-3">
-              {socials.map(({ label, href, Icon }) => (
+              {socials.map(({ label, src }) => (
                 <li key={label}>
                   <a
-                    href={href}
+                    href="#"
                     aria-label={label}
-                    className="grid h-10 w-10 place-items-center rounded-xl bg-white dark:bg-surface text-brand shadow-sm ring-1 ring-line transition-colors hover:bg-brand hover:text-white"
+                    className="grid h-10 w-10 place-items-center rounded-xl bg-white dark:bg-surface shadow-sm ring-1 ring-line transition-opacity hover:opacity-75"
                   >
-                    <Icon className="h-[18px] w-[18px]" />
+                    <Image src={src} alt={label} width={22} height={22} className="object-contain" />
                   </a>
                 </li>
               ))}
