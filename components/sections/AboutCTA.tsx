@@ -38,8 +38,8 @@ export function AboutCTA() {
             </div>
             <AppImage
               asset={images.phoneAssas}
-              sizes="(min-width: 640px) 240px, 70vw"
-              className="mx-auto h-auto w-44 shrink-0 sm:mx-0 sm:w-[240px]"
+              sizes="(min-width: 640px) 280px, 70vw"
+              className="mx-auto h-auto w-44 shrink-0 sm:mx-0 sm:w-[270px]"
             />
           </div>
         </div>
