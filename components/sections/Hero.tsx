@@ -51,7 +51,7 @@ export function Hero() {
                 className="w-full h-auto drop-shadow-2xl"
               />
             </div>
-            <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-brand/95 via-brand/50 to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-[25%] bg-gradient-to-t from-brand/90 via-brand/40 to-transparent z-20 pointer-events-none" />
           </div>
         </div>
 
