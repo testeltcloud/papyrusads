@@ -1,15 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Hanken_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 /*
-  The Figma design uses "Degular Display" (OH no Type Co — a paid font, not on
-  Google Fonts). Hanken Grotesk is the closest free stand-in: same friendly
-  geometric-grotesk feel, full weight range, self-hosted via next/font (no CLS,
-  no render-blocking request). To match the design exactly, drop the licensed
-  Degular .woff2 files into /fonts and swap this for `next/font/local`.
+  The Figma design uses "Degular Display". We use Inter here to give the letters
+  a more square and crisp feel as requested.
 */
-const sans = Hanken_Grotesk({
+const sans = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",

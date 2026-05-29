@@ -12,11 +12,11 @@ export function Hero() {
       <div aria-hidden className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/[0.06] dark:bg-brand/[0.12] blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 h-[380px] w-[380px] rounded-full bg-mint/[0.08] dark:bg-mint/[0.06] blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1240px] flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-10 lg:px-10">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1380px] flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-8 lg:px-6 xl:px-10">
 
         {/* ── Text column ── */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:flex-1 lg:max-w-[520px]">
-          <h1 className="text-[1.9rem] xs:text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] xl:text-[4rem] font-bold leading-[1.1] tracking-tight text-ink">
+        <div className="flex w-full flex-col items-center text-center lg:items-start lg:text-left lg:flex-1 lg:max-w-[600px] xl:max-w-[680px]">
+          <h1 className="text-[2rem] xs:text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] xl:text-[4.8rem] font-bold leading-[1.08] tracking-tight text-ink">
             <span className="block whitespace-nowrap">
               Você no{" "}
               <span className="inline-block rounded-[0.4em] bg-mint px-3 py-1 text-ink leading-tight shadow-sm">
@@ -28,30 +28,30 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg font-medium text-body">
+          <p className="mt-6 text-lg sm:text-xl font-medium text-body">
             Sem complicações. Sem enrolação.
           </p>
 
-          <p className="mt-3 max-w-[420px] text-[0.95rem] sm:text-[1.05rem] leading-relaxed text-body">
+          <p className="mt-4 max-w-[480px] text-base sm:text-lg leading-relaxed text-body">
             Veja os dados que realmente importam, entenda seus
             resultados e tome decisões com mais segurança.
           </p>
 
-          <DownloadButtons className="mt-8 w-full sm:w-auto" />
+          <DownloadButtons className="mt-10 w-full sm:w-auto" size="lg" />
         </div>
 
         {/* ── Phone column with card ── */}
-        <div className="relative w-full max-w-[300px] sm:max-w-[360px] lg:w-[46%] lg:max-w-[500px] xl:max-w-[540px] shrink-0">
-          <div className="relative w-full aspect-square overflow-hidden rounded-[2.5rem] bg-[#f4f5f7] dark:bg-surface-2 shadow-soft">
-            <div className="absolute inset-x-0 top-[6%] flex justify-center px-6">
+        <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
+          <div className="relative w-full aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-[#f4f5f7] dark:bg-surface-2 shadow-soft flex justify-center">
+            <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-[85%] sm:w-[80%]">
               <AppImage
                 asset={images.heroApp}
                 priority
-                sizes="(min-width: 1280px) 540px, (min-width: 1024px) 46vw, (min-width: 640px) 360px, 300px"
-                className="w-[82%] h-auto drop-shadow-2xl"
+                sizes="(min-width: 1280px) 640px, (min-width: 1024px) 48vw, (min-width: 640px) 420px, 320px"
+                className="w-full h-auto drop-shadow-2xl"
               />
             </div>
-            <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-brand/85 via-brand/35 to-transparent z-20 pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-brand/95 via-brand/50 to-transparent z-20 pointer-events-none" />
           </div>
         </div>
 
