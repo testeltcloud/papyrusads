@@ -95,10 +95,10 @@ export function Features() {
           <article className={`${card} bento-card p-8 md:p-10 lg:col-span-5`}>
             <div className="bento-card-content relative z-10">
               <h3 className={heading}>
-                Integração nativa com os maiores canais
+                Conexão com Google, Meta Ads e TikTok Ads
               </h3>
               <p className={body}>
-                Google, Meta e TikTok Ads conectados em segundos. Seus dados de tráfego pago centralizados automaticamente, com total precisão e segurança.
+                Importe automaticamente métricas das principais plataformas de tráfego pago com segurança e confidencialidade.
               </p>
             </div>
             <div className="mt-10 flex flex-1 items-center justify-center relative">
@@ -108,9 +108,9 @@ export function Features() {
 
           <article className={`${card} bento-card overflow-hidden lg:col-span-7`}>
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
-              <h3 className={heading}>Dashboard inteligente e direto ao ponto</h3>
+              <h3 className={heading}>Dashboard simples e visual</h3>
               <p className={body}>
-                Visualize a performance real das suas campanhas num piscar de olhos. Projetado para decisões rápidas, seja na mesa do escritório ou no sofá de casa.
+                Entre em poucos segundos como suas campanhas estão performando. Ideal para consultar o relatório no sofá, ou nos intervalos entre reuniões.
               </p>
             </div>
             <div className="relative mt-4 flex flex-1 flex-col">
@@ -120,9 +120,9 @@ export function Features() {
 
           <article className={`${card} bento-card overflow-hidden lg:col-span-6 flex flex-col`}>
              <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
-              <h3 className={heading}>Domine o vocabulário do tráfego</h3>
+              <h3 className={heading}>Glossário integrado</h3>
               <p className={body}>
-                CAC, ROAS, LTV? Explicamos tudo. Um glossário integrado com definições claras e exemplos práticos para você aprender enquanto gerencia.
+                Não sabe o que é CAC ou ROAS? O app te explica. Com definições simples e exemplos, você aprende enquanto usa.
               </p>
             </div>
             <div className="mt-6 flex flex-1 items-end justify-center px-0 pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out">
@@ -144,9 +144,9 @@ export function Features() {
                 />
               </div>
               <div className="bento-card-content p-8 pt-0 md:p-10 md:pt-0 relative z-20">
-                <h3 className={heading}>Teste grátis por 15 dias</h3>
+                <h3 className={heading}>15 dias grátis para testar</h3>
                 <p className={`${body} mt-3`}>
-                  Comece agora, sem cadastrar cartão de crédito. Descubra na prática como é ter o controle total dos seus anúncios nas palmas das mãos.
+                  Experimente agora, sem cartão de crédito. Descubra como o app vai facilitar sua rotina de anúncios na prática.
                 </p>
               </div>
             </article>

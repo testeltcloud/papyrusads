@@ -17,7 +17,7 @@ export default function HomePage() {
           effect, and the sticky Header lives outside <main> so it's unaffected). */}
       <main className="overflow-x-clip">
         <Hero />
-        <TransitionSection />
+        {/* <TransitionSection /> */}
         <Features />
         <Differentials />
         <SpecialistCTA />
