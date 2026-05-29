@@ -125,22 +125,22 @@ export function Features() {
                 CAC, ROAS, LTV? Explicamos tudo. Um glossário integrado com definições claras e exemplos práticos para você aprender enquanto gerencia.
               </p>
             </div>
-            <div className="mt-8 flex flex-1 items-end justify-center px-0 pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div className="mt-6 flex flex-1 items-end justify-center px-0 pb-0 relative group-hover:scale-105 transition-transform duration-700 ease-out">
               <AppImage
                 asset={images.featureGlossary}
-                sizes="(min-width: 1024px) 460px, 90vw"
-                className="h-auto w-full max-w-[460px] drop-shadow-2xl"
+                sizes="(min-width: 1024px) 340px, 80vw"
+                className="h-auto w-full max-w-[300px] lg:max-w-[340px] drop-shadow-2xl"
               />
             </div>
           </article>
           
           <div className="bento-card lg:col-span-6 flex flex-col justify-between gap-6">
             <article className={`${card} flex flex-col flex-1 overflow-hidden group`}>
-              <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[220px] md:min-h-[320px] overflow-hidden">
+              <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[180px] md:min-h-[240px] overflow-hidden">
                 <AppImage
                   asset={images.featureGift}
-                  sizes="(min-width: 1024px) 383px, 90vw"
-                  className="h-auto w-full max-w-[260px] md:max-w-[383px] scale-100 md:scale-[1.3] origin-center transition-transform duration-700 group-hover:scale-105 md:group-hover:scale-[1.4]"
+                  sizes="(min-width: 1024px) 280px, 70vw"
+                  className="h-auto w-full max-w-[220px] md:max-w-[280px] scale-100 md:scale-[1.1] origin-center transition-transform duration-700 group-hover:scale-105 md:group-hover:scale-[1.18]"
                 />
               </div>
               <div className="bento-card-content p-8 pt-0 md:p-10 md:pt-0 relative z-20">
