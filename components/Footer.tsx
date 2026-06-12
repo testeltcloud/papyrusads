@@ -33,12 +33,12 @@ export function Footer() {
           <div className="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:gap-8">
             {/* Brand — full width on mobile, 5 cols on desktop */}
             <div className="lg:col-span-5">
-              <Logo />
-              <p className="mt-4 max-w-md text-[0.85rem] sm:text-[0.95rem] leading-relaxed text-body">
+              <Logo className="scale-110 origin-left sm:scale-125 sm:mb-2" />
+              <p className="mt-4 max-w-md text-[0.7rem] min-[375px]:text-[0.85rem] sm:text-[0.95rem] leading-relaxed text-body">
                 Simples, confiável e feito para CEOs que querem entender seus<br />
                 anúncios sem complicação.
               </p>
-              <ul className="mt-5 flex items-center gap-3">
+              <ul className="mt-5 flex items-center gap-1.5 sm:gap-2">
                 {socials.map(({ label, src }) => (
                   <li key={label}>
                     <a
@@ -90,14 +90,14 @@ export function Footer() {
                 <h2 className="mt-6 sm:mt-8 text-sm font-bold uppercase tracking-wide text-ink">
                   Dúvidas?
                 </h2>
-                <p className="mt-2 sm:mt-3 text-[0.85rem] sm:text-[0.95rem] text-body">
+                <p className="mt-2 sm:mt-3 text-[0.65rem] min-[400px]:text-[0.75rem] sm:text-[0.95rem] text-body whitespace-nowrap">
                   Fale com a gente pelo WhatsApp:
                 </p>
                 <a
                   href={links.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn mt-3 h-10 sm:h-11 w-full rounded-xl border border-brand bg-white px-2 min-[400px]:px-3 sm:px-5 text-[0.65rem] min-[400px]:text-[0.8rem] sm:text-[0.95rem] text-ink shadow-sm hover:bg-surface-2 dark:bg-surface-2 dark:hover:bg-surface"
+                  className="btn mt-3 h-11 sm:h-12 w-full rounded-xl border border-brand bg-white px-2 min-[400px]:px-3 sm:px-5 font-extrabold tracking-wide text-[0.65rem] min-[400px]:text-[0.8rem] sm:text-[0.95rem] text-ink shadow-sm hover:bg-surface-2 dark:bg-surface-2 dark:hover:bg-surface"
                 >
                   <Image src="/images/adc/Vector.png" alt="WhatsApp" width={20} height={20} className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
                   Entrar em contato
