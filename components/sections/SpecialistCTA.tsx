@@ -4,9 +4,10 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 import { AppImage } from "@/components/ui/AppImage";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { images } from "@/lib/images";
+import { links } from "@/lib/site";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -55,19 +56,28 @@ export function SpecialistCTA() {
           <div className="grid lg:grid-cols-2 lg:items-center overflow-hidden">
 
             {/* Imagem — segunda no mobile (abaixo do texto), primeira (esquerda) no desktop */}
-            <div className="specialist-image order-2 lg:order-1 group flex items-end justify-center px-8 pt-6 pb-0 sm:px-14 lg:px-0 lg:pt-0 lg:self-stretch lg:items-end">
+            <div className="specialist-image order-1 lg:order-1 group flex items-end justify-center px-8 pt-6 pb-0 sm:px-14 lg:px-0 lg:pt-0 lg:self-stretch lg:items-end">
+              {/* Mobile: imagem específica sem corte */}
+              <Image
+                src="/images/adc/phonemobile.png"
+                alt="Papyrus Ads no celular"
+                width={1272}
+                height={776}
+                className="sm:hidden mx-auto h-auto w-full max-w-[280px] mt-4"
+              />
+              {/* Desktop: imagem original com hover */}
               <AppImage
                 asset={images.specialistPhones}
                 sizes="(min-width: 1024px) 480px, 80vw"
-                className="mx-auto h-auto w-full max-w-[210px] sm:max-w-[300px] lg:max-w-[370px]
+                className="hidden sm:block mx-auto h-auto w-full max-w-[300px] lg:max-w-[370px]
                            my-4 lg:my-6
                            transition-transform duration-500 ease-out group-hover:scale-[1.04]"
               />
             </div>
 
             {/* Texto — primeiro no mobile, segundo (direita) no desktop */}
-            <div className="specialist-text order-1 lg:order-2 min-w-0 p-7 sm:p-10 md:p-12 lg:p-14">
-              <h2 className="text-[1.75rem] font-bold leading-[1.15] tracking-tight text-white sm:text-[2rem] md:text-[2.25rem]">
+            <div className="specialist-text order-2 lg:order-2 min-w-0 p-7 sm:p-10 md:p-12 lg:p-14">
+              <h2 className="text-[1.35rem] font-bold leading-[1.15] tracking-tight text-white whitespace-nowrap sm:text-[2rem] md:text-[2.25rem]">
                 Fale com um especialista.
               </h2>
               <p className="mt-4 text-base leading-relaxed text-white/75 sm:mt-5 sm:text-lg">
@@ -79,9 +89,15 @@ export function SpecialistCTA() {
                 no WhatsApp.
               </p>
 
-              <WhatsAppButton size="lg" className="mt-6 w-full sm:w-auto sm:mt-7">
-                Falar com um especialista no WhatsApp
-              </WhatsAppButton>
+              <a href={links.whatsapp} target="_blank" rel="noopener noreferrer" className="mt-6 sm:mt-7 block w-full sm:w-auto">
+                <Image
+                  src="/images/adc/whatsappespecilista.png"
+                  alt="Falar com um especialista no WhatsApp"
+                  width={1272}
+                  height={192}
+                  className="w-full sm:w-auto sm:h-14 h-auto"
+                />
+              </a>
 
               <p className="mt-6 font-bold text-white sm:mt-7">Sem robôs, sem enrolação.</p>
               <p className="mt-1 text-sm text-white/70 sm:text-base">

@@ -25,7 +25,7 @@ export function DownloadButtons({
   const radius  = isRect ? "rounded-xl" : "rounded-full";
   const pad     = isRect
     ? "px-3 sm:px-5 py-0"
-    : isLg ? "px-2 sm:px-6 py-3 sm:py-3.5" : "px-2 sm:px-5 py-2.5 sm:py-3";
+    : isLg ? "px-2 sm:px-6 py-2 sm:py-2.5" : "px-3 sm:px-5 py-1.5 sm:py-2";
   const height  = isRect ? "h-12 sm:h-14" : "";
   const iconSz  = isRect ? "w-4 h-4 sm:w-6 sm:h-6" : isLg ? "w-4 h-4 sm:w-5 sm:h-5" : "w-3.5 h-3.5 sm:w-4 sm:h-4";
   const textSz  = isRect
@@ -48,8 +48,8 @@ export function DownloadButtons({
       <a
         href={links.appStore}
         aria-label="Baixar o Papyrus Ads na App Store"
-        className={`inline-flex justify-center items-center gap-2 ${radius} font-extrabold tracking-wide shadow-sm
-          transition-all duration-200 active:scale-[0.97] hover:shadow-md
+        className={`inline-flex justify-center items-center gap-2 ${radius} font-extrabold tracking-wide
+          transition-all duration-200 active:scale-[0.97]
           ${iosCls} ${pad} ${height} ${textSz} ${itemFlex}`}
       >
         <AppleIcon className={`${iconSz} scale-125 shrink-0`} />
@@ -59,8 +59,8 @@ export function DownloadButtons({
       <a
         href={links.playStore}
         aria-label="Baixar o Papyrus Ads no Google Play"
-        className={`inline-flex justify-center items-center gap-2 ${radius} font-extrabold tracking-wide shadow-sm
-          transition-all duration-200 active:scale-[0.97] hover:shadow-md
+        className={`inline-flex justify-center items-center gap-2 ${radius} font-extrabold tracking-wide
+          transition-all duration-200 active:scale-[0.97]
           ${droidCls} ${pad} ${height} ${textSz} ${itemFlex}`}
       >
         <PlayStoreIcon className={`${iconSz} shrink-0`} />

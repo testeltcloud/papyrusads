@@ -9,6 +9,8 @@ import { DownloadButtons } from "@/components/ui/DownloadButtons";
 import { ConnectionIllustration } from "@/components/ConnectionIllustration";
 import { DashboardFilters } from "@/components/DashboardFilters";
 import { images } from "@/lib/images";
+import Image from "next/image";
+import { links } from "@/lib/site";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -77,9 +79,8 @@ export function Features() {
 
   return (
     <section id="funcionalidades" className="py-20 md:py-32 relative overflow-hidden" ref={containerRef}>
-      {/* Background Decorative Elements for premium feel */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-[#e6f2ef]/50 dark:from-[#1d3531]/15 to-transparent blur-3xl -z-10 rounded-full" />
-      
+
       <div className="container-page relative z-10">
         <div className="feature-header flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
           <h2 className="text-[2.5rem] font-medium text-brand dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] lg:whitespace-nowrap">
@@ -118,8 +119,50 @@ export function Features() {
             </div>
           </article>
 
-          {/* Indicadores card */}
-          <article className={`${card} bento-card overflow-hidden lg:col-span-4 flex flex-col`}>
+          {/* Mobile: layout de imagens (oculto em sm+) */}
+          <div className="sm:hidden col-span-1 flex gap-3">
+            {/* Esquerda: imagemEsqueda */}
+            <div className="flex-1">
+              <Image
+                src="/images/adc/imagemEsqueda.png"
+                alt="Indicadores claros"
+                width={800}
+                height={1000}
+                className="w-full h-full object-cover rounded-[2rem]"
+              />
+            </div>
+            {/* Direita: imagemDireitaSuperior + botões */}
+            <div className="flex flex-col gap-2 flex-1">
+              <Image
+                src="/images/adc/imagemDireitaSuperior.png"
+                alt="15 dias grátis"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-[2rem]"
+              />
+              <a href={links.appStore} aria-label="Baixar na App Store" className="block">
+                <Image
+                  src="/images/adc/ButtonAzul.png"
+                  alt="Download para iOS"
+                  width={620}
+                  height={176}
+                  className="w-full h-auto"
+                />
+              </a>
+              <a href={links.playStore} aria-label="Baixar no Google Play" className="block">
+                <Image
+                  src="/images/adc/ButtonVerde.png"
+                  alt="Download para Android"
+                  width={720}
+                  height={176}
+                  className="w-full h-auto"
+                />
+              </a>
+            </div>
+          </div>
+
+          {/* Indicadores card (oculto no mobile) */}
+          <article className={`${card} bento-card overflow-hidden hidden sm:flex lg:col-span-4 flex-col`}>
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={heading}>Indicadores claros e direto ao ponto</h3>
               <p className={body}>
@@ -135,8 +178,8 @@ export function Features() {
             </div>
           </article>
 
-          {/* Glossário card */}
-          <article className={`${card} bento-card overflow-hidden lg:col-span-4 flex flex-col`}>
+          {/* Glossário card (oculto no mobile) */}
+          <article className={`${card} bento-card overflow-hidden hidden sm:flex lg:col-span-4 flex-col`}>
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={heading}>Glossário integrado</h3>
               <p className={body}>
@@ -152,8 +195,8 @@ export function Features() {
             </div>
           </article>
 
-          {/* 15 dias grátis + download */}
-          <div className="bento-card lg:col-span-4 flex flex-col justify-between gap-6">
+          {/* 15 dias grátis + download (oculto no mobile) */}
+          <div className="bento-card hidden sm:flex lg:col-span-4 flex-col justify-between gap-6">
             <article className={`${card} flex flex-col flex-1 overflow-hidden group`}>
               <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[160px] md:min-h-[200px] overflow-hidden">
                 <AppImage
