@@ -25,7 +25,7 @@ export function FAQ() {
     <section id="faq" className="py-16 md:py-24">
       <div className="container-page">
       <div className="mx-auto grid max-w-[1100px] gap-10 lg:grid-cols-12 lg:gap-16">
-        <div data-reveal data-reveal="left" className="lg:col-span-5">
+        <div data-reveal="left" className="lg:col-span-5">
           <h2 className="text-[2.25rem] font-medium leading-tight tracking-tight sm:text-5xl">
             Perguntas
             <br className="hidden sm:block" /> frequentes

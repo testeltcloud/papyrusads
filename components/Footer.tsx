@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
-import { WhatsAppIcon } from "@/components/icons";
 import { links } from "@/lib/site";
 
 const usefulLinks = [
@@ -24,82 +23,92 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-surface-2">
-      <div className="container-page py-14">
-        <div data-reveal className="grid gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-          {/* Brand */}
-          <div className="lg:col-span-5">
-            <Logo />
-            <p className="mt-4 max-w-xs text-[0.95rem] leading-relaxed text-body">
-              Simples, confiável e feito para CEOs que querem entender seus
-              anúncios sem complicação.
-            </p>
-            <ul className="mt-6 flex items-center gap-3">
-              {socials.map(({ label, src }) => (
-                <li key={label}>
-                  <a
-                    href="#"
-                    aria-label={label}
-                    className="grid h-10 w-10 place-items-center rounded-xl bg-white dark:bg-surface shadow-sm ring-1 ring-line transition-opacity hover:opacity-75"
-                  >
-                    <Image src={src} alt={label} width={22} height={22} className="object-contain" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <footer className="bg-white dark:bg-canvas">
+      <div className="container-page py-8 sm:py-14">
+        {/* ── Card wrapper ── */}
+        <div
+          data-reveal
+          className="rounded-2xl sm:rounded-3xl bg-surface-2 dark:bg-surface p-6 sm:p-10"
+        >
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-12 lg:gap-8">
+            {/* Brand — full width on mobile, 5 cols on desktop */}
+            <div className="lg:col-span-5">
+              <Logo />
+              <p className="mt-4 max-w-md text-[0.85rem] sm:text-[0.95rem] leading-relaxed text-body">
+                Simples, confiável e feito para CEOs que querem entender seus<br />
+                anúncios sem complicação.
+              </p>
+              <ul className="mt-5 flex items-center gap-3">
+                {socials.map(({ label, src }) => (
+                  <li key={label}>
+                    <a
+                      href="#"
+                      aria-label={label}
+                      className="grid h-12 w-12 sm:h-14 sm:w-14 place-items-center rounded-xl sm:rounded-2xl bg-surface-2 dark:bg-surface-2 transition-opacity hover:opacity-75"
+                    >
+                      <Image src={src} alt={label} width={32} height={32} className="h-7 w-7 sm:h-8 sm:w-8 object-contain" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Useful links */}
-          <nav className="lg:col-span-3" aria-label="Links úteis">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
-              Links úteis
-            </h2>
-            <ul className="mt-4 space-y-3 text-[0.95rem]">
-              {usefulLinks.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href} className="text-body transition-colors hover:text-brand">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <ul className="mt-6 space-y-3 text-[0.95rem]">
-              {legalLinks.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href} className="text-body transition-colors hover:text-brand">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+            {/* Bottom columns — merges into 12-col grid on lg */}
+            <div className="grid grid-cols-12 gap-x-3 gap-y-8 sm:gap-x-8 lg:col-span-7 lg:grid-cols-7">
+              {/* Useful links — left column */}
+              <nav className="col-span-5 lg:col-span-3" aria-label="Links úteis">
+                <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
+                  Links úteis
+                </h2>
+                <ul className="mt-4 space-y-3 sm:space-y-3.5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
+                  {usefulLinks.map((item) => (
+                    <li key={item.label}>
+                      <a href={item.href} className="text-body transition-colors hover:text-brand">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-3.5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
+                  {legalLinks.map((item) => (
+                    <li key={item.label}>
+                      <a href={item.href} className="text-body transition-colors hover:text-brand">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
 
-          {/* Download + contact */}
-          <div className="lg:col-span-4">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
-              Baixe agora mesmo
-            </h2>
-            <DownloadButtons className="mt-4" />
+              {/* Download + contact — right column */}
+              <div className="col-span-7 lg:col-span-4">
+                <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
+                  Baixe agora mesmo
+                </h2>
+                <DownloadButtons className="mt-4" stacked shape="rect" />
 
-            <h2 className="mt-8 text-sm font-bold uppercase tracking-wide text-ink">
-              Dúvidas?
-            </h2>
-            <p className="mt-3 text-[0.95rem] text-body">
-              Fale com a gente pelo WhatsApp
-            </p>
-            <a
-              href={links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn mt-3 h-11 bg-green px-5 text-[0.95rem] text-white hover:bg-green-dark"
-            >
-              <WhatsAppIcon className="h-5 w-5" />
-              Entrar em contato
-            </a>
+                <h2 className="mt-6 sm:mt-8 text-sm font-bold uppercase tracking-wide text-ink">
+                  Dúvidas?
+                </h2>
+                <p className="mt-2 sm:mt-3 text-[0.85rem] sm:text-[0.95rem] text-body">
+                  Fale com a gente pelo WhatsApp:
+                </p>
+                <a
+                  href={links.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn mt-3 h-10 sm:h-11 w-full rounded-xl border border-brand bg-white px-2 min-[400px]:px-3 sm:px-5 text-[0.65rem] min-[400px]:text-[0.8rem] sm:text-[0.95rem] text-ink shadow-sm hover:bg-surface-2 dark:bg-surface-2 dark:hover:bg-surface"
+                >
+                  <Image src="/images/adc/Vector.png" alt="WhatsApp" width={20} height={20} className="h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+                  Entrar em contato
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-line pt-6 text-center text-sm text-muted">
+        {/* Copyright — outside the card */}
+        <div className="mt-8 sm:mt-10 pb-2 text-center text-xs sm:text-sm text-muted">
           © {new Date().getFullYear()} Papyrus Ads — Todos os direitos
           reservados. | Designed by Lab Culture
         </div>

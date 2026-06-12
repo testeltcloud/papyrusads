@@ -7,7 +7,7 @@ export function AboutCTA() {
     <section className="py-12 md:py-20">
       <div className="container-page grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         {/* About copy */}
-        <div data-reveal data-reveal="left" className="max-w-xl">
+        <div data-reveal="left" className="max-w-xl">
           <h2 className="text-[1.9rem] font-medium tracking-tight sm:text-[2.1rem]">
             Conheça mais do Papyrus Ads
           </h2>
@@ -27,7 +27,7 @@ export function AboutCTA() {
         </div>
 
         {/* Download box */}
-        <div data-reveal data-reveal="right" data-delay="2" className="rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
+        <div data-reveal="right" data-delay="2" className="rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
           <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:gap-4 md:p-10">
             <div className="flex-1">
               <h3 className="text-[1.6rem] font-semibold leading-snug text-white">
