@@ -93,7 +93,7 @@ export function Features() {
         </div>
 
         <div className="bento-grid mt-16 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-12">
-          <article className={`${card} bento-card p-8 md:p-10 lg:col-span-5`}>
+          <article className={`${card} bento-card p-8 md:p-10 lg:col-span-5 bg-[rgba(236,238,241,1)] sm:bg-white`}>
             <div className="bento-card-content relative z-10">
               <h3 className={heading}>
                 Conexão com Google, Meta Ads e TikTok Ads
@@ -107,7 +107,7 @@ export function Features() {
             </div>
           </article>
 
-          <article className={`${card} bento-card overflow-hidden lg:col-span-7`}>
+          <article className={`${card} bento-card overflow-hidden lg:col-span-7 bg-[rgba(236,238,241,1)] sm:bg-white`}>
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={heading}>Dashboard simples e visual</h3>
               <p className={body}>
@@ -122,17 +122,17 @@ export function Features() {
           {/* Mobile: layout de imagens (oculto em sm+) */}
           <div className="sm:hidden col-span-1 flex gap-3">
             {/* Esquerda: imagemEsqueda */}
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               <Image
                 src="/images/adc/imagemEsqueda.png"
                 alt="Indicadores claros"
                 width={800}
                 height={1000}
-                className="w-full h-full object-cover rounded-[2rem]"
+                className="w-full h-auto rounded-[2rem]"
               />
             </div>
             {/* Direita: imagemDireitaSuperior + botões */}
-            <div className="flex flex-col gap-2 flex-1">
+            <div className="flex flex-col gap-2 flex-1 min-w-0">
               <Image
                 src="/images/adc/imagemDireitaSuperior.png"
                 alt="15 dias grátis"
