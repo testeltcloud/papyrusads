@@ -24,12 +24,12 @@ export function DownloadButtons({
 
   const radius  = isRect ? "rounded-xl" : "rounded-full";
   const pad     = isRect
-    ? "px-2 sm:px-5 py-0"
+    ? "px-3 sm:px-5 py-0"
     : isLg ? "px-2 sm:px-6 py-3 sm:py-3.5" : "px-2 sm:px-5 py-2.5 sm:py-3";
-  const height  = isRect ? "h-11 sm:h-12" : "";
-  const iconSz  = isRect ? "w-5 h-5 sm:w-6 sm:h-6" : isLg ? "w-4 h-4 sm:w-5 sm:h-5" : "w-3.5 h-3.5 sm:w-4 sm:h-4";
+  const height  = isRect ? "h-12 sm:h-14" : "";
+  const iconSz  = isRect ? "w-4 h-4 sm:w-6 sm:h-6" : isLg ? "w-4 h-4 sm:w-5 sm:h-5" : "w-3.5 h-3.5 sm:w-4 sm:h-4";
   const textSz  = isRect
-    ? "text-[0.65rem] min-[400px]:text-[0.8rem] sm:text-[0.95rem]"
+    ? "text-[clamp(10px,3vw,15px)]"
     : isLg ? "text-[11px] sm:text-[15px]" : "text-[11px] sm:text-[13px]";
 
   const rowCls  = stacked ? "flex-col" : "flex-row flex-wrap";

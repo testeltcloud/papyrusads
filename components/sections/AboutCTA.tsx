@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { AppImage } from "@/components/ui/AppImage";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
 import { images } from "@/lib/images";
+import { links } from "@/lib/site";
 
 export function AboutCTA() {
   return (
@@ -21,25 +23,56 @@ export function AboutCTA() {
             <strong className="font-semibold text-ink">
               autonomia, clareza e tranquilidade
             </strong>{" "}
-            para quem toma decisões todos os dias — sem precisar falar “a língua
-            de agência”.
+            para quem toma decisões todos os dias — sem precisar falar &ldquo;a língua
+            de agência&rdquo;.
           </p>
         </div>
 
-        {/* Download box */}
-        <div data-reveal="right" data-delay="2" className="rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
-          <div className="flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:gap-4 md:p-10">
-            <div className="flex-1">
-              <h3 className="text-[1.6rem] font-semibold leading-snug text-white">
+        {/* Download box — mobile: imagem estática */}
+        <div data-reveal="right" data-delay="2" className="sm:hidden relative rounded-[28px] overflow-hidden">
+          <Image
+            src="/images/adc/background.png"
+            alt="Baixe o Papyrus Ads"
+            width={1400}
+            height={1044}
+            className="w-full h-auto"
+          />
+          <div className="absolute bottom-[8%] left-[5%] flex flex-col gap-2 w-[52%]">
+            <a href={links.appStore} aria-label="Baixar na App Store" className="block w-[88%]">
+              <Image
+                src="/images/adc/ButtonCima.png"
+                alt="Download para iOS"
+                width={620}
+                height={160}
+                className="w-full h-auto"
+              />
+            </a>
+            <a href={links.playStore} aria-label="Baixar no Google Play">
+              <Image
+                src="/images/adc/ButtonBaixo.png"
+                alt="Download para Android"
+                width={720}
+                height={160}
+                className="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Download box — desktop: componente dinâmico */}
+        <div data-reveal="right" data-delay="2" className="hidden sm:block rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
+          <div className="flex flex-row items-start gap-6 p-8 md:p-10">
+            <div className="flex-1 min-w-0 pt-1">
+              <h3 className="text-[1.5rem] font-light leading-snug text-white">
                 Baixe agora o app e veja como é simples entender seus
                 resultados.
               </h3>
-              <DownloadButtons className="mt-6" variant="white" />
+              <DownloadButtons className="mt-3" variant="white" stacked shape="rect" />
             </div>
             <AppImage
               asset={images.phoneAssas}
-              sizes="(min-width: 640px) 280px, 70vw"
-              className="mx-auto h-auto w-44 shrink-0 sm:mx-0 sm:w-[270px]"
+              sizes="280px"
+              className="h-auto w-[270px] shrink-0 -mt-10"
             />
           </div>
         </div>

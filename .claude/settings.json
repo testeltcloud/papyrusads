@@ -25,7 +25,8 @@
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/j_450.jpg 1440 1000 450 2600)",
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob0.jpg 390 1500 0 2600)",
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob1.jpg 390 1500 750 2600)",
-      "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob0b.jpg 390 1500 0 2600)"
+      "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob0b.jpg 390 1500 0 2600)",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
