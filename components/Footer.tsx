@@ -34,7 +34,7 @@ export function Footer() {
             {/* Brand — full width on mobile, 5 cols on desktop */}
             <div className="lg:col-span-5">
               <Logo className="scale-110 origin-left sm:scale-125 sm:mb-2" />
-              <p className="mt-4 max-w-md text-[0.7rem] min-[375px]:text-[0.85rem] sm:text-[0.95rem] leading-relaxed text-body">
+              <p className="mt-4 text-[clamp(7px,2.15vw,15px)] leading-relaxed text-body whitespace-nowrap sm:whitespace-normal">
                 Simples, confiável e feito para CEOs que querem entender seus<br />
                 anúncios sem complicação.
               </p>
@@ -57,13 +57,13 @@ export function Footer() {
             <div className="grid grid-cols-12 gap-x-3 gap-y-8 sm:gap-x-8 lg:col-span-7 lg:grid-cols-7">
               {/* Useful links — left column */}
               <nav className="col-span-5 lg:col-span-3" aria-label="Links úteis">
-                <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
+                <h2 className="text-sm font-semibold text-ink">
                   Links úteis
                 </h2>
-                <ul className="mt-4 space-y-3 sm:space-y-3.5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
+                <ul className="mt-4 space-y-5 sm:space-y-5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
                   {usefulLinks.map((item) => (
                     <li key={item.label}>
-                      <a href={item.href} className="text-body transition-colors hover:text-brand">
+                      <a href={item.href} className="text-muted transition-colors hover:text-brand whitespace-nowrap">
                         {item.label}
                       </a>
                     </li>
@@ -72,7 +72,7 @@ export function Footer() {
                 <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-3.5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
                   {legalLinks.map((item) => (
                     <li key={item.label}>
-                      <a href={item.href} className="text-body transition-colors hover:text-brand">
+                      <a href={item.href} className="text-muted transition-colors hover:text-brand">
                         {item.label}
                       </a>
                     </li>
@@ -82,12 +82,12 @@ export function Footer() {
 
               {/* Download + contact — right column */}
               <div className="col-span-7 lg:col-span-4">
-                <h2 className="text-sm font-bold uppercase tracking-wide text-ink">
+                <h2 className="text-sm font-semibold text-ink">
                   Baixe agora mesmo
                 </h2>
                 <DownloadButtons className="mt-4" stacked shape="rect" />
 
-                <h2 className="mt-6 sm:mt-8 text-sm font-bold uppercase tracking-wide text-ink">
+                <h2 className="mt-6 sm:mt-8 text-sm font-semibold text-ink">
                   Dúvidas?
                 </h2>
                 <p className="mt-2 sm:mt-3 text-[0.65rem] min-[400px]:text-[0.75rem] sm:text-[0.95rem] text-body whitespace-nowrap">
