@@ -7,7 +7,7 @@ const usefulLinks = [
   { label: "Sobre o Papyrus Ads", href: "#home" },
   { label: "Funcionalidades", href: "#funcionalidades" },
   { label: "Planos", href: "#download-ios" },
-  { label: "Fale com especialista", href: links.whatsapp },
+  { label: <>Fale com um<br />especialista</>, href: links.whatsapp },
 ];
 
 const legalLinks = [
@@ -62,7 +62,7 @@ export function Footer() {
                 </h2>
                 <ul className="mt-4 space-y-5 sm:space-y-5 text-[0.75rem] min-[400px]:text-[0.85rem] sm:text-[0.95rem]">
                   {usefulLinks.map((item) => (
-                    <li key={item.label}>
+                    <li key={item.href}>
                       <a href={item.href} className="text-muted transition-colors hover:text-brand whitespace-nowrap">
                         {item.label}
                       </a>
