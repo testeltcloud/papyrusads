@@ -6,25 +6,18 @@ import { links } from "@/lib/site";
 
 export function AboutCTA() {
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12 md:py-20 bg-white dark:bg-canvas">
       <div className="container-page grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
         {/* About copy */}
-        <div data-reveal="left" className="max-w-xl">
-          <h2 className="text-[1.9rem] font-medium tracking-tight sm:text-[2.1rem]">
+        <div data-reveal="left" className="rounded-2xl sm:rounded-3xl bg-surface-2 dark:bg-surface p-6 sm:p-10">
+          <h2 className="text-[1.2rem] sm:text-[2.1rem] font-medium tracking-tight whitespace-nowrap text-brand">
             Conheça mais do Papyrus Ads
           </h2>
-          <p className="mt-5 leading-relaxed text-body">
-            Somos especialistas em performance digital e criamos o Papyrus Ads
-            para resolver um problema real: a dificuldade que empresários têm em
-            entender os resultados dos seus próprios anúncios.
+          <p className="mt-5 text-[0.82rem] sm:text-base leading-relaxed text-body">
+            Somos especialistas em performance digital e criamos o Papyrus Ads para resolver um problema real: a dificuldade que empresários têm em entender os resultados dos seus próprios anúncios.
           </p>
-          <p className="mt-4 leading-relaxed text-body">
-            Nosso propósito é dar{" "}
-            <strong className="font-semibold text-ink">
-              autonomia, clareza e tranquilidade
-            </strong>{" "}
-            para quem toma decisões todos os dias — sem precisar falar &ldquo;a língua
-            de agência&rdquo;.
+          <p className="mt-4 text-[0.82rem] sm:text-base leading-relaxed text-body">
+            Nosso propósito é dar <strong className="font-semibold text-[rgba(17,93,140,1)]">autonomia, clareza e tranquilidade</strong> para quem toma decisões todos os dias — sem precisar falar &ldquo;a língua da agência&rdquo;.
           </p>
         </div>
 
