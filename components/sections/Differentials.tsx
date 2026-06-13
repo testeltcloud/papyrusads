@@ -74,7 +74,7 @@ export function Differentials() {
   }, { scope: containerRef });
 
   return (
-    <section id="diferencas" className="py-16 md:py-24" ref={containerRef}>
+    <section id="diferencas" className="py-14 md:py-24" ref={containerRef}>
       <div className="container-page">
         <div className="mx-auto max-w-3xl text-left">
           <h2 className="text-[clamp(1.5rem,7vw,2.25rem)] leading-tight tracking-tight sm:text-5xl">

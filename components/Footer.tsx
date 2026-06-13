@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Logo } from "@/components/Logo";
-import { DownloadButtons } from "@/components/ui/DownloadButtons";
 import { links } from "@/lib/site";
 
 const usefulLinks = [
@@ -86,7 +85,14 @@ export function Footer() {
                 <h2 className="text-sm font-semibold text-ink">
                   Baixe agora mesmo
                 </h2>
-                <DownloadButtons className="mt-4" stacked shape="rect" />
+                <div className="mt-4 flex flex-col gap-2">
+                  <a href={links.appStore} aria-label="Baixar na App Store" className="block">
+                    <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="w-full h-12 object-fill" />
+                  </a>
+                  <a href={links.playStore} aria-label="Baixar no Google Play" className="block">
+                    <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="w-full h-12 object-fill" />
+                  </a>
+                </div>
 
                 <h2 className="mt-6 sm:mt-8 text-sm font-semibold text-ink">
                   Dúvidas?

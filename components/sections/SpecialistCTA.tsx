@@ -50,7 +50,7 @@ export function SpecialistCTA() {
   }, { scope: containerRef });
 
   return (
-    <section className="py-8 md:py-14" ref={containerRef}>
+    <section className="py-14 md:py-24" ref={containerRef}>
       <div className="container-page">
         <div data-reveal className="specialist-card overflow-hidden rounded-[28px] bg-navy text-white">
           <div className="grid lg:grid-cols-2 lg:items-center overflow-hidden">

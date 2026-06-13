@@ -26,7 +26,10 @@
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob0.jpg 390 1500 0 2600)",
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob1.jpg 390 1500 750 2600)",
       "Bash(node shot.js \"http://localhost:3001/\" /tmp/mob0b.jpg 390 1500 0 2600)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }

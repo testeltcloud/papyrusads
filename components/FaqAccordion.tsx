@@ -35,13 +35,13 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 aria-expanded={open}
                 aria-controls={panelId}
                 onClick={() => setOpenIndex(open ? -1 : i)}
-                className={`flex w-full items-center justify-between gap-4 px-5 text-left md:px-6 ${open ? "py-5" : "py-7 min-h-[96px]"}`}
+                className={`flex w-full justify-between gap-4 px-5 text-left md:px-6 ${open ? "items-start py-5" : "items-center py-7 min-h-[96px]"}`}
               >
-                <span className={`text-[0.92rem] md:text-base ${open ? "font-normal" : "font-medium"}`}>
+                <span className={`${open ? "text-[1.05rem] font-medium text-white" : "text-[0.92rem] font-medium text-ink"}`}>
                   {item.q}
                 </span>
                 <ChevronRightIcon
-                  className={`h-5 w-5 shrink-0 transition-transform duration-200 ${
+                  className={`h-5 w-5 shrink-0 mt-0.5 transition-transform duration-200 ${
                     open ? "rotate-90 text-white" : "text-muted"
                   }`}
                 />
@@ -60,7 +60,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-5 pb-5 text-[0.78rem] leading-relaxed text-white/75 md:px-6">
+                <p className="px-5 pb-5 text-[0.88rem] leading-relaxed text-white/75 md:px-6">
                   {item.a}
                 </p>
               </div>

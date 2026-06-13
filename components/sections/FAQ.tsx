@@ -23,7 +23,7 @@ const faqs: FaqItem[] = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-16 md:py-24">
+    <section id="faq" className="py-14 md:py-24">
       <div className="container-page">
         <div className="mx-auto max-w-[1100px]">
           <h2 data-reveal="left" className="text-[1.6rem] sm:text-5xl font-medium leading-tight tracking-tight whitespace-nowrap mb-10">

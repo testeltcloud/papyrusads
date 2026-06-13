@@ -1,12 +1,13 @@
 import { AppImage } from "@/components/ui/AppImage";
-import { DownloadButtons } from "@/components/ui/DownloadButtons";
 import { images } from "@/lib/images";
+import Image from "next/image";
+import { links } from "@/lib/site";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative z-10 flex min-h-[520px] md:min-h-[580px] lg:min-h-[calc(82svh-72px)] flex-col items-center justify-center overflow-hidden bg-canvas px-4 pt-20 pb-10 md:px-8 md:pt-24 md:pb-12"
+      className="relative z-10 flex min-h-[520px] md:min-h-[580px] lg:min-h-[calc(82svh-72px)] flex-col items-center justify-center overflow-hidden bg-canvas px-5 pt-32 pb-0 md:px-8 md:pt-24 md:pb-12"
     >
       {/* Ambient blobs */}
       <div aria-hidden className="pointer-events-none absolute -left-40 -top-40 h-[520px] w-[520px] rounded-full bg-brand/[0.06] dark:bg-brand/[0.12] blur-3xl" />
@@ -37,15 +38,32 @@ export function Hero() {
             resultados e tome decisões com mais segurança.
           </p>
 
-          <div className="hero-enter hero-enter-delay-4">
-            <DownloadButtons className="mt-10 w-full sm:w-auto" size="lg" />
+          <div className="hero-enter hero-enter-delay-4 mt-10 flex items-stretch gap-3 w-full sm:w-auto">
+            <a href={links.appStore} aria-label="Baixar na App Store" className="flex-1 sm:flex-none">
+              <Image
+                src="/images/adc/ButtonAzul.png"
+                alt="Download para iOS"
+                width={620}
+                height={176}
+                className="w-full h-full sm:h-14 sm:w-auto object-fill"
+              />
+            </a>
+            <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-1 sm:flex-none">
+              <Image
+                src="/images/adc/ButtonVerde.png"
+                alt="Download para Android"
+                width={720}
+                height={176}
+                className="w-full h-full sm:h-14 sm:w-auto object-fill"
+              />
+            </a>
           </div>
         </div>
 
         {/* ── Phone column with card ── */}
-        <div className="hero-enter-right relative w-full max-w-[320px] sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
+        <div className="hero-enter-right relative w-full sm:max-w-[420px] lg:w-[48%] lg:max-w-[580px] xl:max-w-[640px] shrink-0">
           <div className="relative w-full aspect-[4/4.0] overflow-hidden rounded-[2.5rem] bg-transparent dark:bg-surface-2 dark:shadow-soft flex justify-center">
-            <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-[85%] sm:w-[80%]">
+            <div className="absolute top-[10%] sm:top-[12%] lg:top-[15%] w-full sm:w-[80%]">
               <AppImage
                 asset={images.heroApp}
                 priority

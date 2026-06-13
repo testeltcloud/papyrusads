@@ -17,6 +17,7 @@ if (typeof window !== "undefined") {
 }
 
 const card = "group rounded-[2.5rem] bg-white dark:bg-surface border border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden";
+const cardFlat = "group rounded-[2.5rem] bg-white dark:bg-surface flex flex-col transition-all duration-700 ease-out relative overflow-hidden";
 const heading = "text-2xl lg:text-[1.75rem] font-medium leading-tight tracking-tight text-ink dark:text-white transition-colors duration-500";
 const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium";
 
@@ -78,21 +79,21 @@ export function Features() {
   }, { scope: containerRef });
 
   return (
-    <section id="funcionalidades" className="py-20 md:py-32 relative overflow-hidden" ref={containerRef}>
+    <section id="funcionalidades" className="pt-8 pb-14 md:py-24 relative overflow-hidden" ref={containerRef}>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1000px] h-[500px] bg-gradient-to-b from-[#e6f2ef]/50 dark:from-[#1d3531]/15 to-transparent blur-3xl -z-10 rounded-full" />
 
       <div className="container-page relative z-10">
-        <div className="feature-header flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
-          <h2 className="text-[2.5rem] font-medium text-brand dark:text-white leading-[1.1] tracking-[-0.03em] sm:text-[3rem] lg:text-[3.2rem] xl:text-[3.5rem] lg:whitespace-nowrap">
+        <div className="feature-header flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 lg:gap-8">
+          <h2 className="text-[2rem] sm:text-[3rem] font-medium text-brand dark:text-white leading-[1.1] tracking-[-0.03em] lg:text-[3.2rem] xl:text-[3.5rem] lg:whitespace-nowrap">
             O que o Papyrus Ads faz por você
           </h2>
-          <p className="max-w-[340px] text-lg lg:text-[1.05rem] leading-relaxed text-gray-600 dark:text-body font-medium lg:text-right">
+          <p className="w-full lg:max-w-[340px] text-base lg:text-[1.05rem] leading-relaxed text-gray-600 dark:text-body font-medium lg:text-right">
             Todas as funcionalidades que você precisa para acompanhar seus
             anúncios com clareza, segurança e sem complicações.
           </p>
         </div>
 
-        <div className="bento-grid mt-16 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-12">
+        <div className="bento-grid mt-8 md:mt-14 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-12">
           <article className={`${card} bento-card p-8 md:p-10 lg:col-span-5 bg-[rgba(236,238,241,1)] sm:bg-white`}>
             <div className="bento-card-content relative z-10">
               <h3 className={heading}>
@@ -128,7 +129,7 @@ export function Features() {
                 alt="Indicadores claros"
                 width={800}
                 height={1000}
-                className="w-full h-auto rounded-[2rem]"
+                className="w-full h-auto"
               />
             </div>
             {/* Direita: imagemDireitaSuperior + botões */}
@@ -138,7 +139,7 @@ export function Features() {
                 alt="15 dias grátis"
                 width={800}
                 height={600}
-                className="w-full h-auto rounded-[2rem]"
+                className="w-full h-auto"
               />
               <a href={links.appStore} aria-label="Baixar na App Store" className="block">
                 <Image
@@ -162,7 +163,7 @@ export function Features() {
           </div>
 
           {/* Indicadores card (oculto no mobile) */}
-          <article className={`${card} bento-card overflow-hidden hidden sm:flex lg:col-span-4 flex-col`}>
+          <article className={`${cardFlat} bento-card overflow-hidden hidden sm:flex lg:col-span-4 flex-col`}>
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={heading}>Indicadores claros e direto ao ponto</h3>
               <p className={body}>
@@ -197,7 +198,7 @@ export function Features() {
 
           {/* 15 dias grátis + download (oculto no mobile) */}
           <div className="bento-card hidden sm:flex lg:col-span-4 flex-col justify-between gap-6">
-            <article className={`${card} flex flex-col flex-1 overflow-hidden group`}>
+            <article className={`${cardFlat} flex flex-col flex-1 overflow-hidden group`}>
               <div className="flex flex-1 items-center justify-center px-0 pt-0 relative min-h-[160px] md:min-h-[200px] overflow-hidden">
                 <AppImage
                   asset={images.featureGift}
