@@ -16,7 +16,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-[1380px] flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-8 lg:px-6 xl:px-10">
 
         {/* ── Text column ── */}
-        <div className="flex w-full flex-col items-center text-center lg:items-start lg:text-left lg:flex-1 lg:max-w-[600px] xl:max-w-[680px]">
+        <div className="flex w-full flex-col items-start text-left lg:items-start lg:text-left lg:flex-1 lg:max-w-[600px] xl:max-w-[680px]">
           <h1 className="hero-enter hero-enter-delay-1 text-[2rem] xs:text-[2.4rem] sm:text-[3.2rem] lg:text-[4rem] xl:text-[4.8rem] font-normal leading-[1.08] tracking-tight text-ink">
             <span className="block whitespace-nowrap">
               Você no{" "}

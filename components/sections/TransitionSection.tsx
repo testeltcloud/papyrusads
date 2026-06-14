@@ -43,8 +43,8 @@ export function TransitionSection() {
         ref={headingRef}
         className="mx-auto max-w-[1240px] px-6 lg:px-10 opacity-0"
       >
-        <div className="flex flex-col items-center gap-5 text-center lg:flex-row lg:items-start lg:justify-between lg:gap-0 lg:text-left">
-          <div className="flex flex-col items-center lg:items-start max-w-md lg:w-[42%]">
+        <div className="flex flex-col items-start gap-5 text-left lg:flex-row lg:items-start lg:justify-between lg:gap-0 lg:text-left">
+          <div className="flex flex-col items-start lg:items-start max-w-md lg:w-[42%]">
             <div className="mb-4 inline-flex rounded-full border border-[#1d3531]/10 dark:border-white/10 bg-[#1d3531]/5 dark:bg-white/5 px-3 py-1 text-xs font-bold tracking-wider text-[#1d3531] dark:text-white/80 uppercase">
               Transparência
             </div>

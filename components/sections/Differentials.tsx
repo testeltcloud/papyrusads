@@ -75,7 +75,7 @@ export function Differentials() {
   return (
     <section id="diferencas" className="py-14 md:py-24" ref={containerRef}>
       <div className="container-page">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-left sm:text-center">
           <h2 className="text-[clamp(1.5rem,7vw,2.25rem)] leading-tight tracking-tight sm:text-5xl text-left sm:text-center">
             <span className="whitespace-nowrap"><span className="font-light">Por que o </span><span className="font-bold">Papyrus Ads</span></span>
             <br className="sm:hidden" />

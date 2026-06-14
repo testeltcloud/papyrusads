@@ -115,7 +115,7 @@ export function Footer() {
         </div>
 
         {/* Copyright — outside the card */}
-        <div className="mt-8 sm:mt-10 pb-2 text-center text-xs sm:text-sm text-muted">
+        <div className="mt-8 sm:mt-10 pb-2 text-left sm:text-center text-xs sm:text-sm text-muted">
           © {new Date().getFullYear()} Papyrus Ads — Todos os direitos
           reservados. | Designed by Lab Culture
         </div>
