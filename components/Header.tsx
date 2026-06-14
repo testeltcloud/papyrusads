@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { Logo } from "@/components/Logo";
 import { MobileNav } from "@/components/MobileNav";
-import { DownloadButtons } from "@/components/ui/DownloadButtons";
-import { nav } from "@/lib/site";
+import { links, nav } from "@/lib/site";
 
 export function Header() {
   return (
@@ -21,8 +21,13 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <DownloadButtons variant="header" />
+        <div className="hidden items-center gap-2 lg:flex">
+          <a href={links.appStore} aria-label="Baixar na App Store">
+            <Image src="/images/adc/ButtonAzullAple.png" alt="Download para iOS" width={620} height={176} className="h-12 w-auto object-fill" />
+          </a>
+          <a href={links.playStore} aria-label="Baixar no Google Play">
+            <Image src="/images/adc/ButtonAzulAndroid.png" alt="Download para Android" width={720} height={176} className="h-12 w-auto object-fill" />
+          </a>
         </div>
 
         <MobileNav />

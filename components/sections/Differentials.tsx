@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { AppImage } from "@/components/ui/AppImage";
-import { DownloadButtons } from "@/components/ui/DownloadButtons";
 import { images } from "@/lib/images";
 import type { ImageAsset } from "@/lib/images";
 import Image from "next/image";
@@ -76,17 +75,24 @@ export function Differentials() {
   return (
     <section id="diferencas" className="py-14 md:py-24" ref={containerRef}>
       <div className="container-page">
-        <div className="mx-auto max-w-3xl text-left">
-          <h2 className="text-[clamp(1.5rem,7vw,2.25rem)] leading-tight tracking-tight sm:text-5xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-[clamp(1.5rem,7vw,2.25rem)] leading-tight tracking-tight sm:text-5xl text-left sm:text-center">
             <span className="whitespace-nowrap"><span className="font-light">Por que o </span><span className="font-bold">Papyrus Ads</span></span>
             <br className="sm:hidden" />
             <span className="font-light"> é diferente</span>
           </h2>
-          <p className=" mx-auto mt-4 max-w-2xl text-base leading-relaxed text-body">
-            Feito para quem quer entender os números — sem depender da agência,
-            sem linguagem difícil, sem surpresas.
+          <p className="mx-auto mt-4 text-base leading-relaxed text-body sm:whitespace-nowrap">
+            Feito para quem quer entender os números — sem depender da agência, sem linguagem difícil, sem surpresas.
           </p>
-          {/* <DownloadButtons className="mt-7 justify-center" /> */}
+          {/* Desktop: botões imagem abaixo do subtítulo */}
+          <div className="hidden sm:flex justify-center items-stretch gap-3 h-[52px] mt-7">
+            <a href={links.appStore} aria-label="Baixar na App Store" className="flex-none">
+              <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="h-full w-auto object-fill" />
+            </a>
+            <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-none">
+              <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="h-full w-auto object-fill" />
+            </a>
+          </div>
         </div>
 
         <div className="diff-grid mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -127,7 +133,8 @@ export function Differentials() {
             </article>
           ))}
         </div>
-        <div className="mt-7 flex items-stretch gap-3">
+        {/* Mobile: botões imagem abaixo dos cards */}
+        <div className="sm:hidden mt-7 flex items-stretch gap-3">
                         <a href={links.appStore} aria-label="Baixar na App Store" className="flex-1">
                           <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="w-full h-full object-fill" />
                         </a>

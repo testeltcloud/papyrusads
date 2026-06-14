@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { AppImage } from "@/components/ui/AppImage";
 import { DownloadButtons } from "@/components/ui/DownloadButtons";
+import { AppImage } from "@/components/ui/AppImage";
 import { images } from "@/lib/images";
 import { links } from "@/lib/site";
 
@@ -54,13 +54,13 @@ export function AboutCTA() {
 
         {/* Download box — desktop: componente dinâmico */}
         <div data-reveal="right" data-delay="2" className="hidden sm:block rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
-          <div className="flex flex-row items-start gap-6 p-8 md:p-10">
-            <div className="flex-1 min-w-0 pt-1">
-              <h3 className="text-[1.5rem] font-light leading-snug text-white">
+          <div className="flex flex-row items-center gap-6 p-8 md:p-10">
+            <div className="flex-1 min-w-0">
+              <h3 className="text-[1.5rem] sm:text-[1.8rem] font-light leading-snug text-white">
                 Baixe agora o app e veja como é simples entender seus
                 resultados.
               </h3>
-              <DownloadButtons className="mt-3" variant="white" stacked shape="rect" />
+              <DownloadButtons className="mt-3 flex-nowrap" variant="white" shape="rect" />
             </div>
             <AppImage
               asset={images.phoneAssas}

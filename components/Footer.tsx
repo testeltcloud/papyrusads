@@ -85,12 +85,12 @@ export function Footer() {
                 <h2 className="text-sm font-semibold text-ink">
                   Baixe agora mesmo
                 </h2>
-                <div className="mt-4 flex flex-col gap-2">
-                  <a href={links.appStore} aria-label="Baixar na App Store" className="block">
-                    <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="w-full h-12 object-fill" />
+                <div className="mt-4 flex flex-col sm:flex-row items-stretch gap-2 sm:h-12">
+                  <a href={links.appStore} aria-label="Baixar na App Store" className="flex-none">
+                    <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="h-12 sm:h-full w-auto" />
                   </a>
-                  <a href={links.playStore} aria-label="Baixar no Google Play" className="block">
-                    <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="w-full h-12 object-fill" />
+                  <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-none">
+                    <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="h-12 sm:h-full w-auto" />
                   </a>
                 </div>
 

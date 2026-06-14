@@ -213,7 +213,14 @@ export function Features() {
                 </p>
               </div>
             </article>
-            <DownloadButtons className="w-full" size="lg" block />
+            <div className="flex justify-center items-stretch gap-3 h-[52px]">
+              <a href={links.appStore} aria-label="Baixar na App Store" className="flex-none">
+                <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="h-full w-auto" />
+              </a>
+              <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-none">
+                <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="h-full w-auto" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
