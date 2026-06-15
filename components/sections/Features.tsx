@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
 const card = "group rounded-[2.5rem] bg-white dark:bg-surface border border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden";
 const cardFlat = "group rounded-[2.5rem] bg-white dark:bg-surface flex flex-col transition-all duration-700 ease-out relative overflow-hidden";
 const heading = "text-2xl lg:text-[1.75rem] font-medium leading-tight tracking-tight text-ink dark:text-white transition-colors duration-500";
-const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 dark:text-body font-medium";
+const body = "mt-4 text-[1.125rem] leading-relaxed text-gray-600 dark:text-[rgba(209,213,219,1)] font-medium";
 
 export function Features() {
   const containerRef = useRef<HTMLElement>(null);
@@ -122,7 +122,7 @@ export function Features() {
           <article className="group rounded-2xl sm:rounded-[2.5rem] bg-[#115D8C] sm:bg-white dark:bg-surface border-0 sm:border sm:border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden bento-card lg:col-span-7">
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
               <h3 className={`${heading} hidden sm:block`}>Dashboard simples e visual</h3>
-              <p className="mt-4 text-[14px] font-normal leading-none tracking-normal text-white sm:text-[#0B0B0A] sm:leading-relaxed sm:text-[1.125rem]">
+              <p className="mt-4 text-[14px] font-normal leading-none tracking-normal text-white sm:text-[#0B0B0A] sm:dark:text-[rgba(209,213,219,1)] sm:leading-relaxed sm:text-[1.125rem]">
                 Entre em poucos segundos como suas campanhas estão performando. Ideal para consultar o relatório no sofá, ou nos intervalos entre reuniões.
               </p>
             </div>
