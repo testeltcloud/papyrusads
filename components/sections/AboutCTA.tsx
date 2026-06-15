@@ -54,18 +54,18 @@ export function AboutCTA() {
 
         {/* Download box — desktop: componente dinâmico */}
         <div data-reveal="right" data-delay="2" className="hidden sm:block rounded-[28px] text-white overflow-hidden" style={{ backgroundColor: '#105c8b' }}>
-          <div className="flex flex-row items-center gap-6 p-8 md:p-10">
+          <div className="flex flex-row items-center gap-4 p-6 md:p-10">
             <div className="flex-1 min-w-0">
               <h3 className="text-[1.5rem] sm:text-[1.8rem] font-light leading-snug text-white">
                 Baixe agora o app e veja como é simples entender seus
                 resultados.
               </h3>
-              <DownloadButtons className="mt-3 flex-nowrap" variant="white" shape="rect" />
+              <DownloadButtons className="mt-3 flex-nowrap [&>a]:text-[11px] [&>a]:px-2 sm:[&>a]:px-3" variant="white" shape="rect" />
             </div>
             <AppImage
               asset={images.phoneAssas}
-              sizes="280px"
-              className="h-auto w-[270px] shrink-0 -mt-10"
+              sizes="240px"
+              className="h-auto w-[240px] shrink-0 -mt-10 -mr-4"
             />
           </div>
         </div>
