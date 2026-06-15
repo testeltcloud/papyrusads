@@ -94,7 +94,7 @@ export function Features() {
         </div>
 
         <div className="bento-grid mt-8 md:mt-14 grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-12">
-          <article className={`${card} bento-card p-8 md:p-10 lg:col-span-5 bg-[rgba(236,238,241,1)] sm:bg-white`}>
+          <article className="group rounded-2xl sm:rounded-[2.5rem] bg-[rgba(243,244,246,1)] sm:bg-white dark:bg-surface border border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden bento-card p-8 md:p-10 lg:col-span-5">
             <div className="bento-card-content relative z-10">
               <h3 className={heading}>
                 Conexão com Google, Meta Ads e TikTok Ads
@@ -108,10 +108,21 @@ export function Features() {
             </div>
           </article>
 
-          <article className={`${card} bento-card overflow-hidden lg:col-span-7 bg-[rgba(236,238,241,1)] sm:bg-white`}>
+          {/* Mobile: imagem acima do card Dashboard */}
+          <div className="sm:hidden col-span-1">
+            <Image
+              src="/images/adc/Background+Border.png"
+              alt="Dashboard"
+              width={1400}
+              height={900}
+              className="w-full h-auto"
+            />
+          </div>
+
+          <article className="group rounded-2xl sm:rounded-[2.5rem] bg-[#115D8C] sm:bg-white dark:bg-surface border-0 sm:border sm:border-gray-200 dark:border-line shadow-md flex flex-col transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 relative overflow-hidden bento-card lg:col-span-7">
             <div className="bento-card-content p-8 pb-0 md:p-10 md:pb-0 relative z-10">
-              <h3 className={heading}>Dashboard simples e visual</h3>
-              <p className={body}>
+              <h3 className={`${heading} hidden sm:block`}>Dashboard simples e visual</h3>
+              <p className="mt-4 text-[14px] font-normal leading-none tracking-normal text-white sm:text-[#0B0B0A] sm:leading-relaxed sm:text-[1.125rem]">
                 Entre em poucos segundos como suas campanhas estão performando. Ideal para consultar o relatório no sofá, ou nos intervalos entre reuniões.
               </p>
             </div>
