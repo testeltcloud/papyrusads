@@ -7,7 +7,7 @@ import { links } from "@/lib/site";
 export function AboutCTA() {
   return (
     <section className="py-14 md:py-24 bg-white dark:bg-canvas">
-      <div className="container-page grid gap-10 lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-14">
+      <div className="container-page grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
         {/* About copy */}
         <div data-reveal="left" className="rounded-2xl sm:rounded-3xl bg-surface-2 dark:bg-surface p-6 sm:p-10">
           <h2 className="text-[1.2rem] sm:text-[2.1rem] font-medium tracking-tight whitespace-nowrap text-brand">
