@@ -26,29 +26,29 @@ export function FAQ() {
     <section id="faq" className="py-14 md:py-24">
       <div className="container-page">
         <div className="mx-auto max-w-[1100px]">
-          <h2 data-reveal="left" className="text-[1.6rem] sm:text-5xl font-medium leading-tight tracking-tight whitespace-nowrap mb-10">
-            Perguntas frequentes
-          </h2>
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
-            {/* Mobile: aparece depois do accordion | Desktop: coluna esquerda */}
-            <div data-reveal="left" className="lg:col-span-5 order-last lg:order-first">
-              <p className="max-w-sm leading-relaxed text-body">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16 lg:items-center">
+            {/* Coluna esquerda */}
+            <div data-reveal="left" className="lg:col-span-5">
+              <h2 className="text-[1.6rem] sm:text-5xl font-medium leading-tight tracking-tight">
+                Perguntas<br />frequentes
+              </h2>
+              <p className="mt-6 max-w-sm leading-relaxed text-body">
                 Ainda tem dúvidas?
                 <br />
                 A gente responde com transparência.
               </p>
-              <div className="mt-7 flex items-stretch gap-3">
-                <a href={links.appStore} aria-label="Baixar na App Store" className="flex-1">
-                  <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="w-full h-full object-fill" />
+              <div className="mt-7 flex flex-row lg:flex-col items-stretch gap-3">
+                <a href={links.appStore} aria-label="Baixar na App Store" className="flex-1 lg:flex-none">
+                  <Image src="/images/adc/ButtonAzul.png" alt="Download para iOS" width={620} height={176} className="w-full lg:w-[210px] h-12 lg:h-14 object-fill" />
                 </a>
-                <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-1">
-                  <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="w-full h-full object-fill" />
+                <a href={links.playStore} aria-label="Baixar no Google Play" className="flex-1 lg:flex-none">
+                  <Image src="/images/adc/ButtonVerde.png" alt="Download para Android" width={720} height={176} className="w-full lg:w-[210px] h-12 lg:h-14 object-fill" />
                 </a>
               </div>
             </div>
 
-            {/* Mobile: aparece primeiro | Desktop: coluna direita */}
-            <div data-reveal data-delay="2" className="lg:col-span-7 order-first lg:order-last">
+            {/* Coluna direita — FAQ accordion */}
+            <div data-reveal data-delay="2" className="lg:col-span-7">
               <FaqAccordion items={faqs} />
             </div>
           </div>
